@@ -23,6 +23,7 @@ end
 
 gem 'jquery-rails'
 gem 'kaminari-bootstrap'
+gem "paperclip", "~> 3.0"
 
 gem 'sorcery'
 

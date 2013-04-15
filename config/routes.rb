@@ -1,6 +1,7 @@
 Nameface::Application.routes.draw do
 
 resources :games
+
 resources :users, :except => [:index, :destroy]
   root :to => 'home#index'
 
