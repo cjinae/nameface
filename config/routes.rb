@@ -2,7 +2,7 @@ Nameface::Application.routes.draw do
 
 resources :games
 
-resources :users, :except => [:index, :destroy]
+resources :users, :except => [:destroy]
   root :to => 'home#index'
 
   # You can have the root of your site routed with "root"
