@@ -14,13 +14,14 @@ class User < ActiveRecord::Base
   :content_type => { :content_type => "image/jpg" },
   :size => { :in => 0..10.kilobytes }
 
-
+  
 	def name
 		"#{first_name} #{last_name}"
 	end
 
-  def get_random_user #number_of_users
-    User.order('RAND()').first(4)#(number_of_users)
+  def self.get_random_user #number_of_users
+    # find(:all).sample(1)
+    User.order("random()").first(1)   #(number_of_users)
   end
 
 

@@ -1,4 +1,13 @@
-<% @users.each do |user| %>
-<img src = "<%=user.avatar.url(:medium) %>" >
 
-<% end %>
+<ul class = "thumbnails">
+	<% @random_user.each do |user| %>
+	<li class = "span4">
+		<div class = "thumbnail">
+			<img src = "<%=user.avatar.url(:thumb) %>" >
+			<%= user.name %>
+			<% end %>
+			<h1><%=@samplename%></h1>
+		</div>
+	</li>
+</ul>
+

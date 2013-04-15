@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
   
   def index
+    @random_user = User.get_random_user
+    @samplename = Guess.name_selector.name
     @users = User.all
-
   end
 
   def new
