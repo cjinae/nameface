@@ -4,6 +4,10 @@ class UsersController < ApplicationController
     @random_user = User.get_random_user
     @samplename = Guess.name_selector.name
     @users = User.all
+    respond_to do |format|
+      format.html {}
+      format.json {render json: @users}
+    end
   end
 
   def new
@@ -22,6 +26,11 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find params[:id]
+    # respond_to do |format|
+    #   format.html do
+    #     format.json {render json: @user}
+    #   end
+    # end
   end
 
 
