@@ -23,10 +23,12 @@
 
 <%#= User.all.inspect %>  <!-- this is to debug -->
 <%# User.all.map{|u| u.first_name}.each do |user|%>  <!-- this is same as & shortcut below -->
-<%= User.all.map(&:first_name).inspect %> <!--.map puts each name into an array -->
+<%= @alluser = User.all.map(&:first_name)%> <!--.map puts each name into an array -->
 <% User.all.map(&:first_name).each do |name|%>
 <%= name %>
 <% end %>
 
+<%= @filterusers = @alluser.reject{|e| 'Joe'.include? e} %>
+<%=@filterusers.sample(2)%>
 
 
