@@ -6,6 +6,7 @@ class UsersController < ApplicationController
     @users = User.all
     respond_to do |format|
       format.html {}
+      # format.json {render json: @users.to_json(only: :first_name)}
       format.json {render json: @users}
     end
   end

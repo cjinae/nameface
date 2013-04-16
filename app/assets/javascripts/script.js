@@ -10,7 +10,18 @@ $.ajax({
 	success: function(data){
 		console.log(data);
 	}
-  })
+ })
 
-});
+$('.thumbnail img').click(function(){
+	console.log('clicked')
+	$('h4').fadeIn(500)
+})
+
+
+$('#0 .realname').click(function(){
+	console.log('baldsf')
+})
+
+
+})
 
