@@ -5,7 +5,10 @@
 	
 	<li class = "span4" id="<%="#{i}"%>">
 		<div class = "thumbnail">
-			<img src = "<%=user.avatar.url(:thumb) %>" >
+			<div class = "imgcontainer">
+				<img class = "image1" src = "<%=user.avatar.url(:thumb) %>" >
+				<img class = "image2" src ="assets/nameis.png"/>
+				</div>
 			<p class = "username"><%= user.name %></p>
 			<h4 class ="wrongname"><%= Guess.name_selector.name %></h4>
 			<h4 class = "wrongname"><%= Guess.name_selector.name %></h4>
@@ -16,6 +19,5 @@
 	</li>
 </ul>
 
-<%# for (i=0; i<5; i++) %> 
 
 
