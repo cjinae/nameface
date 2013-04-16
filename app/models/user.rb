@@ -10,9 +10,9 @@ class User < ActiveRecord::Base
   validates :email, :presence => true, :uniqueness => true
   validates :password, :presence => true, :on => :create
 
-  validates_attachment :avatar, :presence => true,
-  :content_type => { :content_type => "image/jpg" },
-  :size => { :in => 0..10.kilobytes }
+  # validates_attachment :avatar, :presence => true,
+  # :content_type => { :content_type => "image/jpg" },
+  # :size => { :in => 0..10.kilobytes }
 
   
 	def name
@@ -21,7 +21,7 @@ class User < ActiveRecord::Base
 
   def self.get_random_user #number_of_users
     # find(:all).sample(1)
-    User.order("random()").first(1)   #(number_of_users)
+    User.order("random()").first(4)   #(number_of_users)
   end
 
 
