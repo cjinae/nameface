@@ -7,14 +7,13 @@
 		<div class = "thumbnail">
 			<img src = "<%=user.avatar.url(:thumb) %>" >
 			<p class = "username"><%= user.name %></p>
-			<h4><%= Guess.name_selector.name %></h4>
-			<h4><%= Guess.name_selector.name %></h4>
+			<h4 class ="wrongname"><%= Guess.name_selector.name %></h4>
+			<h4 class = "wrongname"><%= Guess.name_selector.name %></h4>
 			<h4 class="realname"><%= user.name %></h4>
 			<% i+=1 %> 	
 			<% end %>
 		</div>
 	</li>
-
 </ul>
 
 <%# for (i=0; i<5; i++) %> 

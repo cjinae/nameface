@@ -13,14 +13,29 @@ $.ajax({
  })
 
 $('.thumbnail img').click(function(){
-	console.log('clicked')
-	$('h4').fadeIn(500)
+	console.log('clicked');
+	// $(this).children('h4').slideToggle(300);
+	$(this).siblings('h4').slideToggle(300);
+
+})
+
+$('.realname').click(function(e) {
+	console.log($(this).text());
+	alert("Correct!");
+	e.stopPropagation();  //stops action from going one level up
+})
+
+$('.wrongname').click(function(e) {
+	console.log($(this).text());
+	alert("Try Again!");
+	$(this).remove();
+
 })
 
 
-$('#0 .realname').click(function(){
-	console.log('baldsf')
-})
+
+
+
 
 
 })
