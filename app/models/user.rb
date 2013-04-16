@@ -25,6 +25,9 @@ class User < ActiveRecord::Base
     User.order("random()").first(4)   #(number_of_users)
   end
 
+  # def self.generate_wrong_names(user)
+  #   User.where("users.id NOT IN (?)", user).sample(2)
+  # end
 
 
 

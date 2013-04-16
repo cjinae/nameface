@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   
   def index
     @random_user = User.get_random_user
-    # @samplename = Guess.name_selector.name
+    # @samplename = User.generate_wrong_names(@random_user)
     @users = User.all
     respond_to do |format|
       format.html {}

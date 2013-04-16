@@ -10,8 +10,10 @@
 				<img class = "image1" src = "<%=user.avatar.url(:thumb) %>" >
 				</div>
 			<p class = "username"><%= user.name %></p>
-			<h4 class ="wrongname"><%= User.all.sample.name %></h4>
-			<h4 class = "wrongname"><%= Guess.name_selector.name %></h4>
+			<% wrong_users = User.where("users.id NOT IN (?)", [user]).sample(2) %>
+			<% wrong_users.map(&:first_name).each do |name| %>
+				<h4 class ="wrongname"><%= name %></h4>			
+			<% end %>
 			<h4 class="realname"><%= user.name %></h4>
 			<% i+=1 %> 	
 			<% end %>
@@ -27,8 +29,8 @@
 <% User.all.map(&:first_name).each do |name|%>
 <%= name %>
 <% end %>
-
-<%= @filterusers = @alluser.reject{|e| 'Joe'.include? e} %>
+<% @user = User.first %>
+<% @filterusers = User.where("users.id NOT IN (?)", [@user]) %>
 <%=@filterusers.sample(2)%>
 
 

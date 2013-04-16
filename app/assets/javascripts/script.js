@@ -30,8 +30,20 @@ $('.realname').click(function(e) {
 	// alert("Correct!");
 });
 
-//flip action
 
+// $('.thumbnail .imgcontainer').click(function(){
+	
+// })
+
+
+
+
+
+
+
+
+
+//flip action
 var margin =$(".image1").width()/2;
 var width=$(".image1").width();
 var height=$(".image1").height();
