@@ -10,7 +10,7 @@
 				<img class = "image1" src = "<%=user.avatar.url(:thumb) %>" >
 				</div>
 			<p class = "username"><%= user.name %></p>
-			<h4 class ="wrongname"><%= Guess.name_selector.name %></h4>
+			<h4 class ="wrongname"><%= User.all.sample.name %></h4>
 			<h4 class = "wrongname"><%= Guess.name_selector.name %></h4>
 			<h4 class="realname"><%= user.name %></h4>
 			<% i+=1 %> 	
@@ -18,6 +18,15 @@
 		</div>
 	</li>
 </ul>
+
+<!--all user names in array -->
+
+<%#= User.all.inspect %>  <!-- this is to debug -->
+<%# User.all.map{|u| u.first_name}.each do |user|%>  <!-- this is same as & shortcut below -->
+<%= User.all.map(&:first_name).inspect %> <!--.map puts each name into an array -->
+<% User.all.map(&:first_name).each do |name|%>
+<%= name %>
+<% end %>
 
 
 
