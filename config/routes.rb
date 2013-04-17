@@ -1,9 +1,12 @@
 Nameface::Application.routes.draw do
 
-resources :games
+resources :games #remove later if not in use
 
 resources :users, :except => [:destroy]
-  root :to => 'users#index'
+resource :session, :only => [:new, :create, :destroy]
+
+
+root :to => 'users#index'
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
