@@ -1,7 +1,6 @@
 class User < ActiveRecord::Base
   authenticates_with_sorcery!
-   attr_accessible :email, :password, :password_confirmation, :first_name, :last_name, :avatar, :cardview
-   attr_accessible :avatar
+   attr_accessible :email, :password, :password_confirmation, :first_name, :last_name, :cardview, :avatar
    has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"  
 
  has_many :assignments
@@ -25,10 +24,10 @@ class User < ActiveRecord::Base
     User.order("random()").first(number_of_cards.to_i)
   end
 
-  # def self.generate_wrong_names(user)
-  #   User.where("users.id NOT IN (?)", user).sample(2)
-  # end
-
-
+  def add_event_to_user(current_user, event_title)
+       @add = User.find params[:current_user]
+       z = (current_user)
+       z.events << User.find_by_title(event_title)
+  end
 
 end

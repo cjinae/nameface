@@ -1,0 +1,18 @@
+<h1> Event#Shows: <%= @event.title%></h1>
+<p>All Events Listed Below</p>
+
+<!-- put in form tag method => :get -->
+<%=form_tag(users_path, :method => 'get', :multipart => true) do %>
+	<%= select_tag(:cardview, options_for_select([
+		[3,'3'],
+		[6,'6'],
+		[9,'9'],
+		[12,'12']
+		], :selected => params[:cardview]  ))%>
+	<%= submit_tag 'Submit' %>
+<%end%>
+
+
+<%= render "facelist" %>
+
+

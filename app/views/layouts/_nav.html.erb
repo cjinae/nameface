@@ -3,13 +3,17 @@
     <a class="brand" href="#">NameFace</a>
     <ul class="nav">
       <!-- if currently in specific controllers, show following nav items -->
-      <li><a href="/">Home</a></li>
-      <li><%= link_to "NameFace Game", games_url %></li>
+
+      <li class="<%= 'active' if params[:controller] == 'users' && params[:action] == 'index' %>"><a href="/">Home</a></li>
+      <li class="<%= 'active' if params[:controller] == 'events' %>">
+        <%= link_to "All Events", events_path %>
+      </li>
       <% if logged_in? %>
-          <li><%= link_to "My Game", games_url %></li>
+          <li class="<%= 'active' if params[:action] == 'show' %>">
+          <%= link_to "My Events", user_path(current_user) %>
+          </li>
       <% end %>
     </ul>
-
 
   <div class="pull-right">
     <% if logged_in? %>

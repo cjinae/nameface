@@ -5,6 +5,7 @@ resources :games #remove later if not in use
 resources :users, :except => [:destroy]
 resource :session, :only => [:new, :create, :destroy]
 
+resources :events
 
 root :to => 'users#index'
 

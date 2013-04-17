@@ -1,0 +1,15 @@
+<h3>These are All the Events</h3>
+
+<h1><%= @current_user.name %></h1>
+
+<% @events.each do |t|%>
+<%= t.title%></br>
+<%= link_to "Play at this event", event_path(t.id)%></br>
+
+<%= link_to "Select Event", user_path(@current_user.id),
+	 						   :action =>  'add_event_to_user',
+							   :event_title => t.title,
+							   :current_user => @current_user.id,
+							   :method => :get
+							   %></br>
+<% end %>

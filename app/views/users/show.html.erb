@@ -1,3 +1,18 @@
 <%#= image_tag @user.avatar.url %>
 <%#= image_tag @user.avatar.url(:medium) %>
-<%= image_tag @user.avatar.url(:thumb) %>
+<%= image_tag @user.avatar.url(:thumb) %></br>
+
+<p><%= @user.name%></p>
+
+<p>Below are a list of all your events: </p>
+<% @user.events.each do |t|%>
+<%= t.title%></br>
+<%= link_to "Play at this event", event_path(t.id)%></br>
+<% end %>
+
+
+
+<!-- for testing -->
+<br>
+<%= @user.events %>
+
