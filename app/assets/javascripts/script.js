@@ -13,7 +13,6 @@ $.ajax({
  });
 
 $('.thumbnail .imgcontainer').click(function(){
-	// console.log('clicked');
 	$(this).siblings('h4').slideToggle(300);
 })
 
@@ -31,18 +30,18 @@ $('.realname').click(function(e) {
 });
 
 //flip action
-var margin =$(".image1").width()/2;
-var width =$(".image1").width();
-var height =$(".image1").height();
+var margin =$(".faceis").width()/2;
+var width =$(".faceis").width();
+var height =$(".faceis").height();
 
 function flip(image) {
-	$(".image2").stop().css({
+	$(".nameis").stop().css({
 		width:'0px',
 		height:''+height+'px',
 		marginLeft:''+margin+'px',
 		opacity:'0.5'
 	});
-	$(image).siblings('.imgcontainer').find('.image1').animate({
+	$(image).siblings('.imgcontainer').find('.faceis').animate({
 		width:'0px',
 		height:''+height+'px',
 		marginLeft:''+margin+'px',
@@ -65,15 +64,6 @@ function flip(image) {
 }
 
 // select cardview count
-// var num = $('#cardview').val();
-
-// $('select').click(function(){
-// 	$('select').attr('selected', true);
-// 	var num = ($('#cardview').val());
-// 	alert(+num)
-// });
-
-
 $("select").change(function () {
   var str = "";
   $("select option:selected").each(function () {
@@ -84,7 +74,6 @@ $("select").change(function () {
   // $("div").text(str);
 })
 .change();
-console.log(this)
 
 
 

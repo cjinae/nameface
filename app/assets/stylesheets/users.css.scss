@@ -14,25 +14,63 @@ h4 {
 	display: none;
 }
 
-
 .imgcontainer{
-	width:400px;
+	width:100%;
 	margin:0px auto;
-	height:380px;
-	margin-top:50px}
+	height:300px;
+	margin-top:50px;
+	position:relative;
+	}
 
-.image1{
+.faceis{
+	position:absolute;
+	cursor:pointer;	
+	width:250px;
+	height:250px;
+	left:55px;
+	border-radius:50%;
+}
+.nameis{
 	position:absolute;
 	cursor:pointer;
-	width:300px;
-	height:190px;
-}
-.image2{
-	position:absolute;
-	cursor:pointer;
-	width:300px;
-	height:190px;
+	width:250px;
+	height:250px;
+	left:55px;
+	border-radius:50%;
 }
 
+@media all and (max-width: 769px) {
+ body {
+ 
+ .faceis{
+ 	width:250px;
+ 	height:250px;
+ }
 
+ .nameis{
+ 	width:250px;
+ 	height:250px;
+ }
+
+ }
+}
+
+@media all and (max-width: 480px) {
+ body {
+ 
+ .faceis{
+ 	width:250px;
+ 	height:250px;
+ 	left:50px; 	
+ }
+
+ .nameis{
+ 	width:250px;
+ 	height:250px;
+ 	left:50px;
+ }
+
+
+ }
+}
 
