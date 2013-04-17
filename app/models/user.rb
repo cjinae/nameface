@@ -4,8 +4,9 @@ class User < ActiveRecord::Base
    attr_accessible :avatar
    has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"  
 
-  has_many :games
-
+ has_many :assignments
+ has_many :events, through: :assignments
+   
   validates :first_name, :presence => true
   validates :last_name, :presence => true
   validates :email, :presence => true, :uniqueness => true
