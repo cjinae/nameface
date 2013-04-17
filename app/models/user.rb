@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   authenticates_with_sorcery!
-   attr_accessible :email, :password, :password_confirmation, :first_name, :last_name, :avatar
+   attr_accessible :email, :password, :password_confirmation, :first_name, :last_name, :avatar, :cardview
    attr_accessible :avatar
    has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"  
 
@@ -19,9 +19,9 @@ class User < ActiveRecord::Base
 		"#{first_name} #{last_name}"
 	end
 
-  def self.get_random_user #(number_of_cards)
+  def self.get_random_user(number_of_cards)
     # find(:all).sample(1)
-    User.order("random()").first(4)      #(number_of_cards)
+    User.order("random()").first(number_of_cards)
   end
 
   # def self.generate_wrong_names(user)

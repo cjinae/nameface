@@ -1,15 +1,13 @@
 
 <!-- put in form tag method => :get -->
-<select id = 'cardview' name='number'>
-  <option selected = "selected">3</option>
-  <option>6</option>
-  <option selected = "selected">9</option>
-  <option>12</option>
-  <option>15</option>
-</select>
-
-<!-- <select id = 'cardview'>
-  <option value = "three">3</option>
+<%= select_tag(:cardview, options_for_select([
+	[3,3],
+	[6,6],
+	[9,9],
+	[12,12]
+	],3))%>
+<!-- <select id = 'cardview' name ='cardview'>
+  <option value = "3">3</option>
   <option value = "6">6</option>
   <option value = "9">9</option>
   <option value = "12">12</option>
@@ -17,9 +15,18 @@
 </select> -->
 
 
+
+<!-- <select id = 'cardview' name ='number'>
+  <option selected = "selected">3</option>
+  <option>6</option>
+  <option selected = "selected">9</option>
+  <option>12</option>
+  <option>15</option>
+</select> -->
+
 <ul class = "thumbnails">	
 	<% i=0 %>
-	<% @random_user.each do |user| %>	
+	<% @random_users.each do |user| %>	
 	<li class = "span4" id="<%="#{i}"%>">
 		<div class = "thumbnail">
 			<div class = "imgcontainer">
@@ -42,13 +49,14 @@
 
 <%#= User.all.inspect %>  <!-- this is to debug -->
 <%# User.all.map{|u| u.first_name}.each do |user|%>  <!-- this is same as & shortcut below -->
+<!-- / -->
 <%= @alluser = User.all.map(&:first_name)%> <!--.map puts each name into an array -->
 <% User.all.map(&:first_name).each do |name|%>
 <%= name %>
 <% end %>
 <% @user = User.first %>
 <% @filterusers = User.where("users.id NOT IN (?)", [@user]) %>
-<%=@filterusers.sample(2)%>
+<%#=@filterusers.sample(2)%>
 
 
 

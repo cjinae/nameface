@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   
   def index
-    @random_user = User.get_random_user
+    @random_users = User.get_random_user(3)  #DON'T KNOW HOW TO PASS FROM INDEX DROPDOWN
     @users = User.all
     respond_to do |format|
       format.html {}
@@ -32,8 +32,5 @@ class UsersController < ApplicationController
     #   end
     # end
   end
-
-
-
 
 end
