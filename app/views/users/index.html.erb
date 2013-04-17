@@ -1,18 +1,14 @@
 
 <!-- put in form tag method => :get -->
-<%= select_tag(:cardview, options_for_select([
-	[3,3],
-	[6,6],
-	[9,9],
-	[12,12]
-	],3))%>
-<!-- <select id = 'cardview' name ='cardview'>
-  <option value = "3">3</option>
-  <option value = "6">6</option>
-  <option value = "9">9</option>
-  <option value = "12">12</option>
-  <option value = "15">15</option>
-</select> -->
+<%=form_tag(users_path, :method => 'get', :multipart => true) do %>
+	<%= select_tag(:cardview, options_for_select([
+		[3,'3'],
+		[6,'6'],
+		[9,'9'],
+		[12,'12']
+		], :selected => params[:cardview]  ))%>
+	<%= submit_tag 'Submit' %>
+<%end%>
 
 <ul class = "thumbnails">	
 	<% @random_users.each do |user| %>	

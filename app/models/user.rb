@@ -21,7 +21,7 @@ class User < ActiveRecord::Base
 
   def self.get_random_user(number_of_cards)
     # find(:all).sample(1)
-    User.order("random()").first(number_of_cards)
+    User.order("random()").first(number_of_cards.to_i)
   end
 
   # def self.generate_wrong_names(user)
