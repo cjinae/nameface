@@ -10,38 +10,7 @@
 	<%= submit_tag 'Submit' %>
 <%end%>
 
-<ul class = "thumbnails">	
-	<% @random_users.each do |user| %>	
-		<li class = "span4">
-			<div class = "thumbnail">
-				<div class = "imgcontainer">
-					<img class = "nameis" src ="assets/nameis.png"/>
-					<img class = "faceis" src = "<%=user.avatar.url(:thumb) %>" >
-				</div>
-				<% x = rand(3) %>
-				<% if x == 0 %>
-					<% wrong_users = User.where("users.id NOT IN (?)", [user]).sample(2) %>
-					<% wrong_users.map(&:first_name).each do |name| %>
-						<h4 class ="wrongname"><%= name %></h4>			
-					<% end %>
-					<h4 class="realname"><%= user.name %></h4>
-				<% elsif x == 1 %>
-					<h4 class="realname"><%= user.name %></h4>
-					<% wrong_users = User.where("users.id NOT IN (?)", [user]).sample(2) %>
-					<% wrong_users.map(&:first_name).each do |name| %>
-						<h4 class ="wrongname"><%= name %></h4>			
-					<% end %>
-				<% else %>
-					<% wrong_users = User.where("users.id NOT IN (?)", [user]).sample(1) %>
-					<% wrong = User.where("users.id NOT IN (?)", [user || wrong_users]).sample(1) %>
-					<h4 class ="wrongname"><%= wrong_users[0].name %></h4>
-					<h4 class="realname"><%= user.name %></h4>
-					<h4 class ="wrongname"><%= wrong[0].name %></h4>
-				<% end %>
-			</div>
-		</li>
-	<% end %>
-</ul>
+<%= render "/users/facelist" %>
 
 <ul class="thumbnails">
 	<% @random_users.each do |user| %>	
@@ -58,7 +27,6 @@
 	    </div>
 	  </li>
 	<% end %>
-
 </ul>
 
 
