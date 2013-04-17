@@ -30,23 +30,10 @@ $('.realname').click(function(e) {
 	// alert("Correct!");
 });
 
-
-// $('.thumbnail .imgcontainer').click(function(){
-	
-// })
-
-
-
-
-
-
-
-
-
 //flip action
 var margin =$(".image1").width()/2;
-var width=$(".image1").width();
-var height=$(".image1").height();
+var width =$(".image1").width();
+var height =$(".image1").height();
 
 function flip(image) {
 	$(".image2").stop().css({
@@ -76,6 +63,34 @@ function flip(image) {
 		});
 	});
 }
+
+// select cardview count
+// var num = $('#cardview').val();
+
+// $('select').click(function(){
+// 	$('select').attr('selected', true);
+// 	var num = ($('#cardview').val());
+// 	alert(+num)
+// });
+
+
+$("select").change(function () {
+  var str = "";
+  $("select option:selected").each(function () {
+            // find form 
+            // .submit
+            // str += $(this).text() + " ";
+  });
+  // $("div").text(str);
+})
+.change();
+console.log(this)
+
+
+
+
+
+
 
 
 

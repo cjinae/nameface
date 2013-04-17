@@ -1,8 +1,25 @@
 
+<!-- put in form tag method => :get -->
+<select id = 'cardview' name='number'>
+  <option selected = "selected">3</option>
+  <option>6</option>
+  <option selected = "selected">9</option>
+  <option>12</option>
+  <option>15</option>
+</select>
+
+<!-- <select id = 'cardview'>
+  <option value = "three">3</option>
+  <option value = "6">6</option>
+  <option value = "9">9</option>
+  <option value = "12">12</option>
+  <option value = "15">15</option>
+</select> -->
+
+
 <ul class = "thumbnails">	
 	<% i=0 %>
-	<% @random_user.each do |user| %>
-	
+	<% @random_user.each do |user| %>	
 	<li class = "span4" id="<%="#{i}"%>">
 		<div class = "thumbnail">
 			<div class = "imgcontainer">
@@ -32,5 +49,10 @@
 <% @user = User.first %>
 <% @filterusers = User.where("users.id NOT IN (?)", [@user]) %>
 <%=@filterusers.sample(2)%>
+
+
+
+
+
 
 
