@@ -13,13 +13,12 @@ $.ajax({
  });
 
 $('.thumbnail .imgcontainer').click(function(){
-	$(this).siblings('h4').slideToggle(300);
+	$(this).siblings('.picklist').slideToggle(300);
 })
 
 $('.wrongname').click(function(e) {
   console.log($(this).text());
-  alert("Try Again!");
-  $(this).remove();
+  $(this).text( "Try Again!")
 });
 
 $('.realname').click(function(e) {
@@ -34,14 +33,14 @@ var margin =$(".faceis").width()/2;
 var width =$(".faceis").width();
 var height =$(".faceis").height();
 
-function flip(image) {
+function flip(name) {
 	$(".nameis").stop().css({
 		width:'0px',
 		height:''+height+'px',
 		marginLeft:''+margin+'px',
 		opacity:'0.5'
 	});
-	$(image).siblings('.imgcontainer').find('.faceis').animate({
+	$(name).parent('.picklist').siblings('.imgcontainer').find('.faceis').animate({
 		width:'0px',
 		height:''+height+'px',
 		marginLeft:''+margin+'px',

@@ -1,6 +1,12 @@
 /*// Place all the styles related to the Events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/*/
+.content-wrap {
+	width: 1000px;
+	margin: 0 auto;
+	border: 1px solid green;
+}
+
 .listed {
 	border: 1px solid red;
 	position: relative;
@@ -12,7 +18,7 @@
 
 .event_title {
 	font-size: 3em;
-	padding-top: 10%;
+	padding-top: 30px;
 }
 
 .event_icon {
@@ -20,6 +26,7 @@
 	height: 104px;
 	border: 2px solid blue;
 	padding-top: 5%;
+	margin: 0 auto;
 }
 
 .cont {
@@ -29,6 +36,7 @@
 	margin: 0 auto;
 	border-radius: 50%;
 	border: 2px black solid;
+	overflow: hidden;
 }
 
 .cont img.wide {
@@ -44,9 +52,15 @@
 }
 
 .play {
-	margin-top: 50%;
+	margin-top: 40px;
 }
 
 .add {
-	margin-top: 50%;
+	border: 1px solid black;
+	margin-top: 40px;
+	height: 40px;
+	background-size: contain;
+	background-image: url("/assets/plus.png");
+	background-repeat: no-repeat;
+	
 }
