@@ -14,3 +14,19 @@
 	  </li>
 	<% end %>
 </ul>
+
+
+
+<!--all user names in array -->
+
+<%#= User.all.inspect %>  <!-- this is to debug -->
+<%# User.all.map{|u| u.first_name}.each do |user|%>  <!-- this is same as & shortcut below -->
+<!-- / -->
+<%= @alluser = User.all.map(&:first_name)%> <!--.map puts each name into an array -->
+<% User.all.map(&:first_name).each do |name|%>
+<%= name %>
+<% end %>
+<% @user = User.first %>
+<% @filterusers = User.where("users.id NOT IN (?)", [@user]) %>
+<%#=@filterusers.sample(2)%>
+

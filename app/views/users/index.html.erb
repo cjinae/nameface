@@ -1,30 +1,17 @@
-<!-- put in form tag method => :get -->
-<%=form_tag(users_path, :method => 'get', :multipart => true) do %>
-	<%= select_tag(:cardview, options_for_select([
-		[3,'3'],
-		[6,'6'],
-		[9,'9'],
-		[12,'12']
-		], :selected => params[:cardview]  ))%>
-	<%= submit_tag 'Submit' %>
-<%end%>
-
+<div class = " dropdown_wrapper">
+	<%=form_tag(users_path, :method => 'get', :multipart => true) do %>
+		<%= submit_tag 'Go!', :class => "dropdown_submit" %>
+		<%= select_tag(:cardview, options_for_select([
+			[3,'3'],
+			[6,'6'],
+			[9,'9'],
+			[12,'12']
+			], :selected => params[:cardview], :class => "dropdown"  ))%>
+	<%end%>
+</div>
 <%= render "/users/facelist" %>
 
 
-
-<!--all user names in array -->
-
-<%#= User.all.inspect %>  <!-- this is to debug -->
-<%# User.all.map{|u| u.first_name}.each do |user|%>  <!-- this is same as & shortcut below -->
-<!-- / -->
-<%= @alluser = User.all.map(&:first_name)%> <!--.map puts each name into an array -->
-<% User.all.map(&:first_name).each do |name|%>
-<%= name %>
-<% end %>
-<% @user = User.first %>
-<% @filterusers = User.where("users.id NOT IN (?)", [@user]) %>
-<%#=@filterusers.sample(2)%>
 
 
 
