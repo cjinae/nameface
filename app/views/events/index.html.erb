@@ -4,6 +4,7 @@
 
 <% @events.each do |t|%>
 <%= t.title %></br>
+<%= image_tag t.avatar.url(:thumb) %></br>
 <%= link_to "Name These Faces", event_path(t.id) %></br>
 
 <%= link_to "Add to My Events", :controller => :events, 
