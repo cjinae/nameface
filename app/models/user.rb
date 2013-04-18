@@ -19,6 +19,10 @@ class User < ActiveRecord::Base
 		"#{first_name} #{last_name}"
 	end
 
+  def firstname
+    "#{first_name}"
+  end
+
   def self.get_random_user(number_of_cards)
     # find(:all).sample(1)
     User.order("random()").first(number_of_cards.to_i)

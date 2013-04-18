@@ -12,19 +12,19 @@
 					<% wrong_users.map(&:first_name).each do |name| %>
 						<h4 class ="wrongname"><%= name %></h4>			
 					<% end %>
-					<h4 class="realname"><%= user.name %></h4>
+					<h4 class="realname"><%= user.firstname %></h4>
 				<% elsif x == 1 %>
-					<h4 class="realname"><%= user.name %></h4>
+					<h4 class="realname"><%= user.firstname %></h4>
 					<% wrong_users = User.where("users.id NOT IN (?)", [user]).sample(2) %>
-					<% wrong_users.map(&:first_name).each do |name| %>
+					<% wrong_users.map(&:first_name && :last_name).each do |name| %>
 						<h4 class ="wrongname"><%= name %></h4>			
 					<% end %>
 				<% else %>
 					<% wrong_users = User.where("users.id NOT IN (?)", [user]).sample(1) %>
 					<% wrong = User.where("users.id NOT IN (?)", [user || wrong_users]).sample(1) %>
-					<h4 class ="wrongname"><%= wrong_users[0].name %></h4>
-					<h4 class="realname"><%= user.name %></h4>
-					<h4 class ="wrongname"><%= wrong[0].name %></h4>
+					<h4 class ="wrongname"><%= wrong_users[0].firstname %></h4>
+					<h4 class="realname"><%= user.firstname %></h4>
+					<h4 class ="wrongname"><%= wrong[0].firstname %></h4>
 				<% end %>
 			</div>
 		</li>

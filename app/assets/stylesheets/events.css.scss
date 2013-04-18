@@ -1,3 +1,12 @@
-// Place all the styles related to the Events controller here.
+/*// Place all the styles related to the Events controller here.
 // They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// You can use Sass (SCSS) here: http://sass-lang.com/*/
+
+.event_avatar {
+	border: 2px black solid;
+	border-radius: 50%;
+}
+
+.event_title {
+	font-size: 4em;
+}
