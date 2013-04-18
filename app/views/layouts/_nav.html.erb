@@ -12,6 +12,9 @@
           <li class="<%= 'active' if params[:controller] == 'users' && params[:action] == 'show' %>">
           <%= link_to "My Events", user_path(current_user) %>
           </li>
+          <li ckass="<%= 'active' if params[:controller] == 'events' && params[:action] == 'new' %>">
+          <%= link_to "Create Events", new_event_path %>
+          </li>
       <% end %>
     </ul>
 
