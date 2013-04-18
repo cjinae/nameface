@@ -13,7 +13,11 @@
 .wrongclick{
 
 }
-.picklist {
+.namespacer {
+	height:32px;
+}
+
+.namespacer .namelist{
 	display: none;
 	text-align: center;
 }
@@ -21,16 +25,16 @@
 .picknames {
 	display: inline-block;
 	padding-left: 5px;
-	padding-right: 5px;	
+	padding-right: 5px;
 }
 
 .imgcontainer{
 	width:100%;
 	margin:0 auto;
-	height:300px;
-	margin-top:50px;
+	height:280px;
+	margin-top:32px;
 	position:relative;
-	}
+}
 
 .faceis{
 	position:absolute;

@@ -13,7 +13,10 @@ $.ajax({
  });
 
 $('.thumbnail .imgcontainer').click(function(){
-	$(this).siblings('.picklist').slideToggle(300);
+	console.log(this)
+	$(this).siblings('.namespacer').find('.namelist').slideToggle(300);
+	// $('.imgcontainer').css("height","268px");
+	// $('.imgcontainer').css("margin-bottom","0px");
 })
 
 $('.wrongname').click(function(e) {
@@ -40,7 +43,7 @@ function flip(name) {
 		marginLeft:''+margin+'px',
 		opacity:'0.5'
 	});
-	$(name).parent('.picklist').siblings('.imgcontainer').find('.faceis').animate({
+	$(name).parent('.namespacer').siblings('.imgcontainer').find('.faceis').animate({
 		width:'0px',
 		height:''+height+'px',
 		marginLeft:''+margin+'px',
