@@ -1,9 +1,7 @@
-<div class="navbar">
+<div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
-    <a class="brand" href="#">NameFace</a>
+    <a class= "logo" href="#">HOO?</a>
     <ul class="nav">
-      <!-- if currently in specific controllers, show following nav items -->
-
       <li class="<%= 'active' if params[:controller] == 'users' && params[:action] == 'index' %>"><a href="/">Home</a></li>
       <li class="<%= 'active' if params[:controller] == 'events' && params[:action] == 'index' %>">
         <%= link_to "All Events", events_path %>
