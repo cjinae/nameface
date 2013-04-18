@@ -2,24 +2,31 @@
 
 <ul class = "thumbnails">
 	<% @events.each do |t|%>
-		<li class = "span12">
+		<li class = "span12 listed">
 			<div class = "row-fluid">
 				<div class = "span12">
 					<div class = "row-fluid">
 						<div class = "span4">
-							<div class = "cont">
-								<img class = "event_avatar" src= "<%= t.avatar %>">
+							<div class = "event_icon">
+								<div class = "cont">
+									<img class = "event_avatar" src= "<%= t.avatar %>">
+								</div>
 							</div>
 						</div>
 						<div class = "span5">
 							<p class = "event_title"><%= t.title %></p>
+							<p class = "event_description"><%= t.description %></p>
+						</div>
+						<div class = "span1">
+							<button class=" play btn btn-small" type="button"><%= link_to "Name These Faces", event_path(t.id)%></button></br>
+						</div>
+						<div class = "span1">
+							<button class=" add btn btn-small" type="button"><%= link_to "Add to My Events", :controller => :events, 
+														:action => 'add_event_to_user', 
+														:current_user => @current_user,
+														:event_title => t.title %></button>
 						</div>
 					</div>
-						<%= link_to "Name These Faces", event_path(t.id) %></br>
-						<%= link_to "Add to My Events", :controller => :events, 
-													:action => 'add_event_to_user', 
-													:current_user => @current_user,
-													:event_title => t.title %></br>
 				</div>
 			</div>
 		</li>
