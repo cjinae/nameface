@@ -3,10 +3,29 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/*/
 
 .event_avatar {
-	border: 2px black solid;
 	border-radius: 50%;
 }
 
 .event_title {
-	font-size: 4em;
+	font-size: 3em;
+}
+
+.cont {
+	width: 104px;
+	height: 104px;
+	/*margin: 0 auto;*/
+	border-radius: 50%;
+	border: 2px black solid;
+}
+
+.cont img.wide {
+	max-width: 100%;
+	max-height: 100%;
+	height: auto;
+}
+
+.cont img.tall {
+	max-height: 100%;
+	max-width: 100%;
+	width: auto;
 }

@@ -64,16 +64,16 @@ function flip(image) {
 }
 
 // select cardview count
-$("select").change(function () {
-  var str = "";
-  $("select option:selected").each(function () {
+// $("select").change(function () {
+  // var str = "";
+  // $("select option:selected").each(function () {
             // find form 
             // .submit
             // str += $(this).text() + " ";
-  });
+  // });
   // $("div").text(str);
-})
-.change();
+// })
+// .change();
 
 
 

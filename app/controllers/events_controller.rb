@@ -45,10 +45,12 @@ before_filter :uniq_title, :only => :add_event_to_user
 
 
   	def add_event_to_user
-       z = User.find(params[:current_user])
-       	z.events << Event.find_by_title(params[:event_title])
-       	redirect_to user_path(z)
-       	flash[:notice] =  "#{z.events}"
+     	z = User.find(params[:current_user])
+     	x = Event.find_by_title(params[:event_title])
+	   	z.events << x
+	   	# redirect_to user_path(z)
+	   	redirect_to events_path      	
+	    flash[:notice] =  params[:event_title]
   	end
 
 protected 

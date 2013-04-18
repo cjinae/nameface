@@ -7,7 +7,6 @@
 					<img class = "faceis" src = "<%=user.avatar.url(:thumb) %>" >
 				</div>
 				<% x = rand(3) %>
-				<%= x %>
 				<% if x == 0 %>
 					<% wrong_users = User.where("id NOT IN (?)", [user]).sample(2) %>
 					<% wrong_users.map(&:first_name).each do |name| %>
@@ -17,7 +16,7 @@
 				<% elsif x == 1 %>
 					<h4 class="realname"><%= user.firstname %></h4>
 					<% wrong_users = User.where("id NOT IN (?)", [user]).sample(2) %>
-					<% wrong_users.map(&:first_name && :last_name).each do |name| %>
+					<% wrong_users.map(&:first_name).each do |name| %>
 						<h4 class ="wrongname"><%= name %></h4>			
 					<% end %>
 				<% else %>

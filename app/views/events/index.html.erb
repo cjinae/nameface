@@ -1,7 +1,5 @@
 <h3>These are All the Events</h3>
 
-<h1><%= @current_user.name %></h1>
-
 <ul class = "thumbnails">
 	<% @events.each do |t|%>
 		<li class = "span12">
@@ -9,7 +7,9 @@
 				<div class = "span12">
 					<div class = "row-fluid">
 						<div class = "span4">
-							<img class = "event_avatar" src="<%= t.avatar.url(:thumb) %>">
+							<div class = "cont">
+								<img class = "event_avatar" src= "<%= t.avatar %>">
+							</div>
 						</div>
 						<div class = "span5">
 							<p class = "event_title"><%= t.title %></p>
@@ -25,3 +25,13 @@
 		</li>
 	<% end %>
 </ul>
+
+
+<script>
+	$(window).load(function(){
+	 $('.cont').find('img').each(function(){
+	  var imgClass = (this.width/this.height > 1) ? 'wide' : 'tall';
+	  $(this).addClass(imgClass);
+	 })
+	})
+</script>
