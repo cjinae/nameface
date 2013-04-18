@@ -5,11 +5,11 @@
       <!-- if currently in specific controllers, show following nav items -->
 
       <li class="<%= 'active' if params[:controller] == 'users' && params[:action] == 'index' %>"><a href="/">Home</a></li>
-      <li class="<%= 'active' if params[:controller] == 'events' %>">
+      <li class="<%= 'active' if params[:controller] == 'events' && params[:action] == 'index' %>">
         <%= link_to "All Events", events_path %>
       </li>
       <% if logged_in? %>
-          <li class="<%= 'active' if params[:action] == 'show' %>">
+          <li class="<%= 'active' if params[:controller] == 'users' && params[:action] == 'show' %>">
           <%= link_to "My Events", user_path(current_user) %>
           </li>
       <% end %>

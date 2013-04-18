@@ -3,13 +3,13 @@
 <h1><%= @current_user.name %></h1>
 
 <% @events.each do |t|%>
-<%= t.title%></br>
-<%= link_to "Play at this event", event_path(t.id)%></br>
+<%= t.title %></br>
+<%= link_to "Name These Faces", event_path(t.id) %></br>
 
-<%= link_to "Select Event", user_path(@current_user.id),
-	 						   :action =>  'add_event_to_user',
-							   :event_title => t.title,
-							   :current_user => @current_user.id,
-							   :method => :get
-							   %></br>
+<%= link_to "Add to My Events", :controller => :events, 
+							:action => 'add_event_to_user', 
+							:current_user => @current_user,
+							:event_title => t.title %></br>
+
+
 <% end %>

@@ -7,12 +7,22 @@
 <p>Below are a list of all your events: </p>
 <% @user.events.each do |t|%>
 <%= t.title%></br>
-<%= link_to "Play at this event", event_path(t.id)%></br>
-<% end %>
+<%= link_to "Name These Faces", event_path(t.id)%></br>
+
+<% if @user == current_user %>
+	<%= link_to "Leave Event",  :controller => :events,
+								:action => 'remove_event_from_user',
+								:current_user => @user,
+								:event_title => t.title %></br>
+
+	<% end %>
+<%end%>
 
 
 
 <!-- for testing -->
 <br>
 <%= @user.events %>
+
+
 

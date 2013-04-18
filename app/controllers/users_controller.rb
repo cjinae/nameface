@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
-  
+
+  before_filter :require_login, :only => :show
+
   def index
     if params[:cardview].nil?
       @random_users = User.get_random_user(3)
@@ -31,5 +33,14 @@ class UsersController < ApplicationController
   def show
     @user = User.find params[:id]
   end
+
+  def check_uniq
+    
+
+  end
+
+# if current_user.events includes? :event_title  don't add event to user
+
+
 
 end

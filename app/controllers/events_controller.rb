@@ -1,4 +1,6 @@
 class EventsController < ApplicationController
+before_filter :uniq_title, :only => :add_event_to_user 
+
 	def index
 		@events = Event.all
 		@current_user = current_user
@@ -32,5 +34,31 @@ class EventsController < ApplicationController
 
 	def destroy
 	end
+
+	def remove_event_from_user
+		z = User.find(params[:current_user])
+		x = Event.find_by_title(params[:event_title])
+       z.events.delete(x)
+       redirect_to user_path(z)
+	end
+
+
+  	def add_event_to_user
+       z = User.find(params[:current_user])
+       	z.events << Event.find_by_title(params[:event_title])
+       	redirect_to user_path(z)
+       	flash[:notice] =  "#{z.events}"
+  	end
+
+protected 
+
+  	def uniq_title
+  		z = User.find(params[:current_user])
+  		x = z.events
+  		if x.any? {|h| h[:title] == params[:event_title]}
+  			redirect_to events_path
+  			flash[:alert] = "You already added this event"
+  		end
+  	end
 
 end

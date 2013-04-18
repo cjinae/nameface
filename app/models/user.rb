@@ -24,10 +24,4 @@ class User < ActiveRecord::Base
     User.order("random()").first(number_of_cards.to_i)
   end
 
-  def add_event_to_user(current_user, event_title)
-       @add = User.find params[:current_user]
-       z = (current_user)
-       z.events << User.find_by_title(event_title)
-  end
-
 end
