@@ -13,25 +13,19 @@
  *= require_tree .
  */
 
-$green: #8CA93E;
-$yellow: #fec128;
+$yellow: #DBD518;
+$yellowOwl: #fec128;
 $brown: #2c1c0d;
 $brownOwl: #744a23;
-$greyOwl: #f7f6f4;
-$grey: #FBFBFB;
-$yellow: #dbd53d;
-$red: #AE2B2B;
-$blue: #53777a;
-$black: #111315;
-$greyDark: #3F3E43;
-$greyMute: #2c2c2c;
-$textColor: #383530;
+$green: #8CA93E;
+$greenDark: #789136;
+$beige: #F6FA9C;
 
 .body {
 	background-color: $green;
 }
 
-h1.page_title {
+.page_title {
 	color: #383530; 
 	font-size: 70px;
 	margin-top: 36px;
@@ -79,16 +73,13 @@ h1.page_title {
 }
 
 .container1 {
-	/*outline: blue solid;*/
 }
 
 .dropdown_wrapper {
-	/*border: 1px yellow solid;*/
 	height: 40px;
 }
 
 #cardview {
-	/*border: blue solid 1px;*/
 	width: 50px;
 	float: right;
 }

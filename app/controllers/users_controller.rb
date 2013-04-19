@@ -6,7 +6,7 @@ class UsersController < ApplicationController
     if params[:cardview].nil?
       @random_users = User.get_random_user(12)
     else
-      @random_users = User.get_random_user params[:cardview] #DON'T KNOW HOW TO PASS FROM INDEX DROPDOWN
+      @random_users = User.get_random_user params[:cardview]
     end
     # @users = User.all
     # respond_to do |format|

@@ -1,7 +1,8 @@
-// Place all the styles related to the Pages controller here.
+/*// Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// You can use Sass (SCSS) here: http://sass-lang.com/*/
 $fontCore: 'Source Sans Pro', sans-serif;
+
 $yellow: #DBD518;
 $yellowOwl: #fec128;
 $brown: #2c1c0d;
@@ -20,7 +21,6 @@ $beige: #F6FA9C;
     height:100%;
     width:100%;
     z-index: -10;
-
     /* Preserve aspet ratio */
   }
 
@@ -65,8 +65,8 @@ $beige: #F6FA9C;
       margin-top: 40px;
       margin-left: 20px;
     }
-
   }
+
   .valueprop{
     h2 {
       text-transform: uppercase;
@@ -92,61 +92,10 @@ $beige: #F6FA9C;
     }
   }
 
-  .landing-button {
-
-    float:right;
-    margin-bottom: 30px;
-    margin-left:30px;
-    color:$beige;
-    padding:5px 20px;
-    font-size: 30px;
-    font-weight: 500;
-    text-decoration: none;
-    text-align: center;
-    margin-top:30px;
-    line-height: 50px;
-    border-radius: 3px;
-    background: -moz-linear-gradient(
-    top,
-    $green 0%,
-    $greenDark);
-    background: -webkit-gradient(
-    linear, left top, left bottom,
-    from($green),
-    to($greenDark));
-    -moz-box-shadow:
-    0px 3px 10px rgba(000,000,000,0.5),
-    inset 0px 0px 1px rgba(255,255,255,0.5);
-   -webkit-box-shadow:
-    0px 3px 10px rgba(000,000,000,0.5),
-    inset 0px 0px 1px rgba(255,255,255,0.5);
-    box-shadow:
-    0px 3px 10px rgba(000,000,000,0.5),
-    inset 0px 0px 1px rgba(255,255,255,0.5);
-    text-shadow:
-    0px -1px 0px rgba(000,000,000,0.7),
-    0px 1px 0px rgba(255,255,255,0.3);
-    }
-  .landing-button:hover{
-              background: -moz-linear-gradient(
-    top,
-    $greenDark 0%,
-    $green);
-  background: -webkit-gradient(
-    linear, left top, left bottom,
-    from($greenDark),
-    to($green));
-        color:$yellow;
-      }
-
-
-
-
 
 }
 
 @media all and (max-width: 1200px) {
-
  body {
   .pages-container{
     .logo-container{
@@ -182,25 +131,24 @@ $beige: #F6FA9C;
 @media all and (max-width: 624px) {
  body {
   .pages-container{
-
     .logo-container{
-      width:50% !important;
-    }
-    #owl {
-      height:180px !important;
-    }
-    h1 {
-    font-size: 50px !important;
-   }
+    width:50% !important;
+  }
+  #owl {
+  height:180px !important;
+  }
+  h1 {
+  font-size: 50px !important;
+  }
 
-   h2{
-    font-size:50px !important;
-   }
-    .landing-button{
-      font-size: 20px;
-      line-height: 20px;
-    }
-
+  h2{
+  font-size:50px !important;
+  }
+  
+  .green {
+  font-size: 20px;
+  line-height: 20px;
   }
   }
-}
+  }
+  } 

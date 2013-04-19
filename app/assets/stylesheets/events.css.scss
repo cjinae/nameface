@@ -32,7 +32,6 @@ $beige: #F6FA9C;
 .event_title {
 	font-size: 3em;
 	padding-top: 37px;
-	/*text-transform:uppercase;*/
 	color: #383530;
 }
 
@@ -77,6 +76,7 @@ $beige: #F6FA9C;
 	width: 50%;
 }
 
+/*btn*/
 .landing-button {
   float:right;
   margin-bottom: 30px;
@@ -120,8 +120,31 @@ $beige: #F6FA9C;
   linear, left top, left bottom,
   from($brownOwl),
   to($brownOwl));
-      color:$yellow;
-      text-decoration: none;
+  color:$yellow;
+  text-decoration: none;
+}
+.green {
+  background: -moz-linear-gradient(
+  top,
+  $green 0%,
+  $greenDark);
+  background: -webkit-gradient(
+  linear, left top, left bottom,
+  from($green),
+  to($greenDark));
+}
+
+.green:hover{
+  background: -moz-linear-gradient(
+  top,
+  $greenDark 0%,
+  $green);
+  background: -webkit-gradient(
+  linear, left top, left bottom,
+  from($greenDark),
+  to($green));
+  color:$yellow;
+  text-decoration: none;
 }
 
 

@@ -22,10 +22,12 @@
 									<%= link_to "Play", event_path(t.id), class: "landing-button" %>
 								</div>
 								<div class = "span2">
+									<% if logged_in? %>
 									<%= link_to "Add", {:controller => :events, 
 															:action => 'add_event_to_user', 
 															:current_user => @current_user,
 															:event_title => t.title}, class: "landing-button" %>
+									<% end %>
 								</div>
 							</div>
 						</div>
