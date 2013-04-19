@@ -19,7 +19,7 @@ $brown: #2c1c0d;
 $brownOwl: #744a23;
 $greyOwl: #f7f6f4;
 $grey: #FBFBFB;
-$yellow: #DBD518;
+$yellow: #dbd53d;
 $red: #AE2B2B;
 $blue: #53777a;
 $black: #111315;
@@ -28,7 +28,9 @@ $greyMute: #2c2c2c;
 $textColor: #383530;
 
 .body {
-	background-color: #C3EF85;
+	background-color: $green;
+	/*background-color: #86A23A;*/
+	/*background-color: #C3EF85;*/
 	 /*background: url('/assets/bgpattern.jpg') repeat;*/
 }
 

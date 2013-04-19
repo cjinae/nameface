@@ -12,7 +12,11 @@
 /*	border: 1px solid red;*/
 	position: relative;
   	border-radius: 10px;
-  	background-color: #D3FF99;
+  	background: rgba(251, 251, 251, 0.3);
+  	/*background: rgba(213, 213, 213, 0.3);*/
+ 	/*background: rgba(171, 201, 90, 0.6);*/
+  	/*background: rgba(213, 213, 213, 0.3);*/
+  	/*background-color: #b5d16a;*/
   	/* box shadow */
 	-moz-box-shadow:    3px 3px 5px 3px #D3D3D3;
   	-webkit-box-shadow: 3px 3px 5px 3px #D3D3D3;
@@ -71,3 +75,22 @@
 	background-image: url("/assets/plus.png");
 	background-repeat: no-repeat;
 }
+
+/* Create New Events Page Style*/
+.form_wrapper {
+	margin-left: 55px;
+}
+
+.upload {
+	/*margin-bottom: 30px;*/
+}
+
+.create_event {
+	width: 50%;
+}
+
+
+
+
+
+

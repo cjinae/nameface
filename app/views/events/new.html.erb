@@ -1,30 +1,27 @@
-<h2>Create A New Event</h2>
-
-<%= form_for @event do |f| %>
-
-  <div class="span6">
-
-    <% unless f.object.errors.empty? %>
-      <div class="alert alert-error">
-        <strong>Try again after fixing the following things:</strong><br/>
-        <ul>
-          <% f.object.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
-
-    <%= f.text_field :title, placeholder: "Event Title", class: "input-block-level" %>
-    <%= f.text_field :description, placeholder: "Description", class: "input-block-level" %>
-    <%= f.file_field :avatar %>
-
+<div class = "container-fluid span12">
+  <div class="span5 offset3">
     <div class="form-actions">
-      <%= f.submit 'Create Event', class: 'btn btn-primary' %>
+      <h2>Create A New Event</h2>
+      <%= form_for @event do |f| %>
+          <% unless f.object.errors.empty? %>
+            <div class="alert alert-error">
+              <strong>Try again after fixing the following things:</strong><br/>
+              <ul>
+                <% f.object.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+            <%= f.text_field :title, placeholder: "Event Title", class: "input-block-level" %>
+            <%= f.text_field :description, placeholder: "Description", class: "input-block-level" %>
+            <div class = "upload"><%=f.file_field :avatar %></div>
+            <div class = "span7" style = "text-align:center"><%= f.submit 'Create Event', class: 'btn' %></div>
+          </div>
+      <% end %>
     </div>
-
-    
-  <% end %>
-
+  </div>
 </div>
+
+
 

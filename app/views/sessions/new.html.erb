@@ -1,18 +1,13 @@
-<h1>Log into your existing Account</h1>
-<p>Fill in your information below</p>
-
-<hr/>
-
-<%= form_tag session_path, :method => :post do %>
-
-  <div class="span6">
-
-    <%= text_field_tag :email, params[:email], placeholder: "E-mail Address", class: "input-block-level" %>
-    <%= password_field_tag :password, '', placeholder: "Password", class: "input-block-level" %>
-    
+<div class = "container-fluid span12">
+  <div class="span5 offset3">
     <div class="form-actions">
-      <%= submit_tag 'Login', class: 'btn btn-primary' %>
+		<h1>I Remember You!</h1>
+		<p>Log in below.</p>
+		<%= form_tag session_path, :method => :post do %>
+		    <%= text_field_tag :email, params[:email], placeholder: "E-mail Address", class: "input-block-level" %>
+	    	<%= password_field_tag :password, '', placeholder: "Password", class: "input-block-level" %>
+		    <%= submit_tag 'Login', class: 'btn' %>
+		<% end %>
     </div>
   </div>
-
-<% end %>
+</div>
