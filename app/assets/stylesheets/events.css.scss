@@ -11,15 +11,12 @@
 .listed {
 /*	border: 1px solid red;*/
 	position: relative;
-	/*background-color: #f7f6f4;*/
-	/* box shadow */
-	-moz-box-shadow:    7px 8px 6px 6px #2c1c0d;
-  	-webkit-box-shadow: 7px 8px 6px 6px #2c1c0d;
-  	box-shadow:         7px 8px 6px -6px #2c1c0d;
-  	border-radius: 4px;
-
-background-image: -webkit-radial-gradient(left top, circle farthest-corner, #FFFFFF 0%, #F2F0F0 100%);
-
+  	border-radius: 10px;
+  	background-color: #D3FF99;
+  	/* box shadow */
+	-moz-box-shadow:    3px 3px 5px 3px #D3D3D3;
+  	-webkit-box-shadow: 3px 3px 5px 3px #D3D3D3;
+  	box-shadow:         0 4px 9px -6px #3F3E43;
 }
 
 .event_avatar {
@@ -29,6 +26,8 @@ background-image: -webkit-radial-gradient(left top, circle farthest-corner, #FFF
 .event_title {
 	font-size: 3em;
 	padding-top: 30px;
+	text-transform:uppercase;
+	color: #383530;
 }
 
 .event_icon {

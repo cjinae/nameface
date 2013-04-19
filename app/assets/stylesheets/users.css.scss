@@ -13,18 +13,9 @@
 }
 
 .thumbnail {
-	background-color: #f7f6f4;
+	background-color: #FBFBFB;
 	/* box shadow */
-	-moz-box-shadow:    7px 8px 6px 6px #2c1c0d;
-  	-webkit-box-shadow: 7px 8px 6px 6px #2c1c0d;
-  	box-shadow:         7px 8px 6px -6px #2c1c0d;
-	/* bg gradient */ 
-	background-image: -ms-radial-gradient(right top, circle farthest-side, #FFFFFF 0%, #F2F0F0 100%);
-	background-image: -moz-radial-gradient(right top, circle farthest-side, #FFFFFF 0%, #F2F0F0 100%);
-	background-image: -o-radial-gradient(right top, circle farthest-side, #FFFFFF 0%, #F2F0F0 100%);
-	background-image: -webkit-gradient(radial, right top, 0, right top, 954, color-stop(0, #FFFFFF), color-stop(1, #F2F0F0));
-	background-image: -webkit-radial-gradient(right top, circle farthest-side, #FFFFFF 0%, #F2F0F0 100%);
-	background-image: radial-gradient(circle farthest-side at right top, #FFFFFF 0%, #F2F0F0 100%);
+  	border: 1px solid white;
 }
 
 .imgcontainer{

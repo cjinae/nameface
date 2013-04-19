@@ -13,12 +13,41 @@
  *= require_tree .
  */
 
+$green: #8CA93E;
+$yellow: #fec128;
+$brown: #2c1c0d;
+$brownOwl: #744a23;
+$greyOwl: #f7f6f4;
+$grey: #FBFBFB;
+$yellow: #DBD518;
+$red: #AE2B2B;
+$blue: #53777a;
+$black: #111315;
+$greyDark: #3F3E43;
+$greyMute: #2c2c2c;
+$textColor: #383530;
+
 .body {
-	background-color: #8CA93E;
+	background-color: #C3EF85;
+	 /*background: url('/assets/bgpattern.jpg') repeat;*/
+}
+
+h1.page_title {
+	color: #383530; 
+	/*text-shadow: 1px 1px #FBFBFB;*/
+	font-size: 70px;
+	margin-top: 20px;
 }
 
 .nav li {
 	line-height: 30px;
+}
+
+.navbar {
+  .navbar-inner {
+    background-color: #383530;
+    background-image: none;
+  }
 }
 
 .navbar-inner .pull-right {
@@ -37,7 +66,7 @@
 }
 .container {
 	/*outline: black solid 1px;*/
-	padding-top: 70px;
+	padding-top: 50px;
 }
 
 .container1 {
