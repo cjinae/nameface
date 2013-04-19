@@ -1,0 +1,206 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$fontCore: 'Source Sans Pro', sans-serif;
+$yellow: #DBD518;
+$yellowOwl: #fec128;
+$brown: #2c1c0d;
+$brownOwl: #744a23;
+$green: #8CA93E;
+$greenDark: #789136;
+$beige: #F6FA9C;
+
+.pages-container{
+  font-family: $fontCore;
+
+  #bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height:100%;
+    width:100%;
+    z-index: -10;
+
+    /* Preserve aspet ratio */
+  }
+
+  .hero {
+
+    .span12 {
+      padding:25px;
+      background-color: rgba(255,255,255,0);
+      border-radius: 10px;
+      margin:50px auto 0px auto;
+      position:relative;
+    }
+
+    .logo-container {
+      overflow: auto;
+      margin:auto;
+      width:50%;
+    }
+
+    .logo-image {
+      overflow: auto;
+      float:left;
+    }
+
+    .logo-copy {
+      float:left;
+    }
+
+    #owl {
+      width:200px;
+      height:233px;
+    }
+
+    h1 {
+      text-transform: uppercase;
+      font-weight: 700;
+      text-shadow:0px 0px 0px rgba(0,0,0,1);
+      color:$yellow;
+      font-size:125px;
+      text-align:left;
+      line-height:1;
+      margin-top: 40px;
+      margin-left: 20px;
+    }
+
+  }
+  .valueprop{
+    h2 {
+      text-transform: uppercase;
+      font-weight: 700;
+      text-shadow:0px 0px 0px rgba(0,0,0,1);
+      color:$yellow;
+      font-size:80px;
+      text-align:left;
+      line-height:1;
+      margin-top: 40px;
+      margin-right: 0px;
+    }
+    h3 {
+      text-transform: uppercase;
+      font-weight: 700;
+      text-shadow:0px 0px 0px rgba(0,0,0,1);
+      color:$yellow;
+      font-size:40px;
+      text-align:right;
+      line-height:1;
+      margin-top: 40px;
+      margin-right: 0px;
+    }
+  }
+
+  .landing-button {
+
+    float:right;
+    margin-bottom: 30px;
+    margin-left:30px;
+    color:$beige;
+    padding:5px 20px;
+    font-size: 30px;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    margin-top:30px;
+    line-height: 50px;
+    border-radius: 3px;
+    background: -moz-linear-gradient(
+    top,
+    $green 0%,
+    $greenDark);
+    background: -webkit-gradient(
+    linear, left top, left bottom,
+    from($green),
+    to($greenDark));
+    -moz-box-shadow:
+    0px 3px 10px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(255,255,255,0.5);
+   -webkit-box-shadow:
+    0px 3px 10px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(255,255,255,0.5);
+    box-shadow:
+    0px 3px 10px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(255,255,255,0.5);
+    text-shadow:
+    0px -1px 0px rgba(000,000,000,0.7),
+    0px 1px 0px rgba(255,255,255,0.3);
+    }
+  .landing-button:hover{
+              background: -moz-linear-gradient(
+    top,
+    $greenDark 0%,
+    $green);
+  background: -webkit-gradient(
+    linear, left top, left bottom,
+    from($greenDark),
+    to($green));
+        color:$yellow;
+      }
+
+
+
+
+
+}
+
+@media all and (max-width: 1200px) {
+
+ body {
+  .pages-container{
+    .logo-container{
+      width:60% !important;
+    }
+  }
+ }
+}
+
+@media all and (max-width: 1000px) {
+
+ body {
+  .pages-container{
+    .logo-container{
+      width:70% !important;
+    }
+  }
+ }
+}
+
+@media all and (max-width: 825px) {
+
+ body {
+  .pages-container{
+    .logo-container{
+      width:100% !important;
+    }
+  }
+ }
+}
+
+
+@media all and (max-width: 624px) {
+ body {
+  .pages-container{
+
+    .logo-container{
+      width:50% !important;
+    }
+    #owl {
+      height:180px !important;
+    }
+    h1 {
+    font-size: 50px !important;
+   }
+
+   h2{
+    font-size:50px !important;
+   }
+    .landing-button{
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+  }
+  }
+}

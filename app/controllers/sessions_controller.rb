@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
   def create
     @user = login(params[:email], params[:password])
     if @user
-      redirect_to :root, :notice => "Welcome back"
+      redirect_to user_path(@user), :notice => "Welcome back"
     else
       flash.now[:alert] = "Invalid credentials. Try again?"
       render :new

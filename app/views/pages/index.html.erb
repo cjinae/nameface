@@ -1,0 +1,26 @@
+<div class="pages-container">
+  <%= image_tag("landing-bg.jpg", :alt => "rss feed", id: "bg") %>
+  <section class="hero">
+    <div class="row-fluid">
+      <div class="span12">
+        <div class="logo-container">
+          <div class="logo-image"><%= image_tag("owlgif.gif", :alt => "rss feed", id: "owl") %></div>
+          <div class="logo-copy"><h1> Hoo?</h1></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="valueprop">
+    <div class="row-fluid">
+      <div class="span6 offset3">
+        <h2> Can't remember hoo is hoo?</h2>
+        <h3>Hoo? is made for you.</h3>
+        <%= link_to 'Log In', new_session_path, class: "landing-button" %>
+        <%= link_to 'Start Remembering People', new_user_path, class: "landing-button" %>
+
+      </div>
+      <div class="span3"></div>
+    </div>
+  </section>
+
+</div>

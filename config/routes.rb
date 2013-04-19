@@ -10,7 +10,7 @@ resources :events do
   end 
 end 
 
-root :to => 'home#index'
+root :to => 'pages#index'
 
 
   # You can have the root of your site routed with "root"
