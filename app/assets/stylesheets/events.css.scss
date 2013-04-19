@@ -2,6 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/*/
 
+$fontCore: 'Source Sans Pro', sans-serif;
+$yellow: #DBD518;
+$yellowOwl: #fec128;
+$brown: #2c1c0d;
+$brownOwl: #744a23;
+$green: #8CA93E;
+$greenDark: #789136;
+$beige: #F6FA9C;
+
 .content-wrap {
 	width: 1000px;
 	margin: 0 auto;
@@ -63,18 +72,6 @@
 	width: auto;
 }
 
-.play {
-	margin-top: 40px;
-}
-
-.add {
-	/*border: 1px solid black;*/
-	margin-top: 40px;
-	height: 40px;
-	background-size: contain;
-	background-image: url("/assets/plus.png");
-	background-repeat: no-repeat;
-}
 
 /* Create New Events Page Style*/
 .form_wrapper {
@@ -89,7 +86,53 @@
 	width: 50%;
 }
 
+.landing-button {
 
+    float:right;
+    margin-bottom: 30px;
+    margin-left:30px;
+    color:$beige;
+    padding:3px 30px;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    margin-top:30px;
+    line-height: 50px;
+    border-radius: 3px;
+    background: -moz-linear-gradient(
+    top,
+    $brownOwl 0%,
+    $brownOwl);
+    background: -webkit-gradient(
+    linear, left top, left bottom,
+    from($brownOwl),
+    to($brownOwl));
+    -moz-box-shadow:
+    0px 2px 5px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(255,255,255,0.5);
+   -webkit-box-shadow:
+    0px 2px 5px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(255,255,255,0.5);
+    box-shadow:
+    0px 2px 5px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(255,255,255,0.5);
+    text-shadow:
+    0px -1px 0px rgba(000,000,000,0.7),
+    0px 1px 0px rgba(255,255,255,0.3);
+    }
+  .landing-button:hover{
+              background: -moz-linear-gradient(
+    top,
+    $brownOwl 0%,
+    $brownOwl);
+  background: -webkit-gradient(
+    linear, left top, left bottom,
+    from($brownOwl),
+    to($brownOwl));
+        color:$yellow;
+        text-decoration: none;
+      }
 
 
 

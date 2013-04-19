@@ -49,6 +49,10 @@ h1.page_title {
   .navbar-inner {
     background-color: #383530;
     background-image: none;
+    a {
+    font-size:20px;
+    text-shadow: none !important;
+    }
   }
 }
 
