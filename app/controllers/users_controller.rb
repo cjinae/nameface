@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 
   def index
     if params[:cardview].nil?
-      @random_users = User.get_random_user(3)
+      @random_users = User.get_random_user(12)
     else
       @random_users = User.get_random_user params[:cardview] #DON'T KNOW HOW TO PASS FROM INDEX DROPDOWN
     end
@@ -24,7 +24,7 @@ class UsersController < ApplicationController
   	@user = User.new params[:user]
   	if @user.save
   		auto_login(@user)
-  		redirect_to root_path, :notice => 'Account Created'
+  		redirect_to user_path(current_user), :notice => 'Account Created'
   	else
   		render :new
   	end

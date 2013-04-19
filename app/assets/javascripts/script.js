@@ -19,13 +19,14 @@ $('.thumbnail .imgcontainer').click(function(){
 
 $('.wrongname').click(function(e) {
   console.log($(this).text());
-  $(this).text( "Try Again!")
+  $(this).text( "woo?")
 });
 
 $('.realname').click(function(e) {
 	console.log($(this).text());
 	e.stopPropagation();  //stops action from going one level up
 	$(this).css('color','#53777a');
+	$(this).siblings('.wrongname').remove();
 	flip(this);
 	// alert("Correct!");
 });

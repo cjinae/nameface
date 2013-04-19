@@ -14,19 +14,12 @@ $beige: #F6FA9C;
 .content-wrap {
 	width: 1000px;
 	margin: 0 auto;
-	/*border: 1px solid green;*/
 }
 
 .listed {
-/*	border: 1px solid red;*/
 	position: relative;
   	border-radius: 10px;
   	background: rgba(251, 251, 251, 0.3);
-  	/*background: rgba(213, 213, 213, 0.3);*/
- 	/*background: rgba(171, 201, 90, 0.6);*/
-  	/*background: rgba(213, 213, 213, 0.3);*/
-  	/*background-color: #b5d16a;*/
-  	/* box shadow */
 	-moz-box-shadow:    3px 3px 5px 3px #D3D3D3;
   	-webkit-box-shadow: 3px 3px 5px 3px #D3D3D3;
   	box-shadow:         0 4px 9px -6px #3F3E43;
@@ -38,16 +31,15 @@ $beige: #F6FA9C;
 
 .event_title {
 	font-size: 3em;
-	padding-top: 30px;
-	text-transform:uppercase;
+	padding-top: 37px;
+	/*text-transform:uppercase;*/
 	color: #383530;
 }
 
 .event_icon {
 	width: 104px;
 	height: 104px;
-	/*border: 2px solid blue;*/
-	padding-top: 5%;
+	padding-top: 8%;
 	margin: 0 auto;
 }
 
@@ -56,7 +48,6 @@ $beige: #F6FA9C;
 	height: 80%;
 	margin: 0 auto;
 	border-radius: 50%;
-	/*border: 2px black solid;*/
 	overflow: hidden;
 }
 
@@ -82,61 +73,56 @@ $beige: #F6FA9C;
   margin-top: 30px;
 }
 
-.upload {
-	/*margin-bottom: 30px;*/
-}
-
 .create_event {
 	width: 50%;
 }
 
 .landing-button {
-
-    float:right;
-    margin-bottom: 30px;
-    margin-left:30px;
-    color:$beige;
-    padding:3px 30px;
-    font-size: 20px;
-    font-weight: 500;
-    text-decoration: none;
-    text-align: center;
-    margin-top:30px;
-    line-height: 50px;
-    border-radius: 3px;
-    background: -moz-linear-gradient(
-    top,
-    $brownOwl 0%,
-    $brownOwl);
-    background: -webkit-gradient(
-    linear, left top, left bottom,
-    from($brownOwl),
-    to($brownOwl));
-    -moz-box-shadow:
-    0px 2px 5px rgba(000,000,000,0.5),
-    inset 0px 0px 1px rgba(255,255,255,0.5);
-   -webkit-box-shadow:
-    0px 2px 5px rgba(000,000,000,0.5),
-    inset 0px 0px 1px rgba(255,255,255,0.5);
-    box-shadow:
-    0px 2px 5px rgba(000,000,000,0.5),
-    inset 0px 0px 1px rgba(255,255,255,0.5);
-    text-shadow:
-    0px -1px 0px rgba(000,000,000,0.7),
-    0px 1px 0px rgba(255,255,255,0.3);
-    }
-  .landing-button:hover{
-              background: -moz-linear-gradient(
-    top,
-    $brownOwl 0%,
-    $brownOwl);
+  float:right;
+  margin-bottom: 30px;
+  margin-left:30px;
+  color:$beige;
+  padding:3px 30px;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+  margin-top:30px;
+  line-height: 50px;
+  border-radius: 3px;
+  background: -moz-linear-gradient(
+  top,
+  $brownOwl 0%,
+  $brownOwl);
   background: -webkit-gradient(
-    linear, left top, left bottom,
-    from($brownOwl),
-    to($brownOwl));
-        color:$yellow;
-        text-decoration: none;
-      }
+  linear, left top, left bottom,
+  from($brownOwl),
+  to($brownOwl));
+  -moz-box-shadow:
+  0px 2px 5px rgba(000,000,000,0.5),
+  inset 0px 0px 1px rgba(255,255,255,0.5);
+ -webkit-box-shadow:
+  0px 2px 5px rgba(000,000,000,0.5),
+  inset 0px 0px 1px rgba(255,255,255,0.5);
+  box-shadow:
+  0px 2px 5px rgba(000,000,000,0.5),
+  inset 0px 0px 1px rgba(255,255,255,0.5);
+  text-shadow:
+  0px -1px 0px rgba(000,000,000,0.7),
+  0px 1px 0px rgba(255,255,255,0.3);
+}
+.landing-button:hover{
+  background: -moz-linear-gradient(
+  top,
+  $brownOwl 0%,
+  $brownOwl);
+  background: -webkit-gradient(
+  linear, left top, left bottom,
+  from($brownOwl),
+  to($brownOwl));
+      color:$yellow;
+      text-decoration: none;
+}
 
 
 
