@@ -2,6 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/*/
 
+.peep_owl {
+	/*border: black 1px solid;*/
+	width: 300px;
+	height: 150px;
+	margin: 0 auto;
+	z-index: 3;
+	background-image: url("/assets/owl.png");
+	background-repeat:no-repeat;
+	background-position: center;
+	background-size: 100px 117px;
+	margin-bottom: -55px;
+}
+
 .correct {
 	color: #53777a;
 }
@@ -54,6 +67,7 @@
 .form-actions{
 	background-color: #F5F5F5;
 	border-radius: 5px;
+	z-index: -1;
 }
 
 
