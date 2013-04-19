@@ -1,10 +1,8 @@
 class SessionsController < ApplicationController
-  # Login page
   def new
     
   end
 
-  # Login submit action
   def create
     @user = login(params[:email], params[:password])
     if @user
@@ -15,7 +13,6 @@ class SessionsController < ApplicationController
     end
   end
 
-  # Logout submit
   def destroy
     logout
     redirect_to :root, notice: "Bye... Hope to see you later!"

@@ -28,7 +28,12 @@ $beige: #F6FA9C;
 .page_title {
 	color: #383530; 
 	font-size: 70px;
-	margin-top: 36px;
+	margin-top: 50px;
+}
+
+.page_title.adj {
+	margin-left: -70px;
+	margin-top: 29px;
 }
 
 .nav li {
@@ -69,7 +74,7 @@ $beige: #F6FA9C;
 
 }
 .container {
-	padding-top: 50px;
+	padding-top: 40px;
 }
 
 .container1 {

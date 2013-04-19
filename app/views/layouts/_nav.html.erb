@@ -6,7 +6,7 @@
     <%= link_to '', root_path, class:"logo" %>
     <% end %>
     <ul class="nav">
-      <li class="<%= 'active' if params[:controller] == 'users' && params[:action] == 'index' %>"><%= link_to "Home", users_path %></li>
+      <li class="<%= 'active' if params[:controller] == 'users' && params[:action] == 'index' %>"><%= link_to "Random Play", users_path %></li>
       <li class="<%= 'active' if params[:controller] == 'events' && params[:action] == 'index' %>">
         <%= link_to "All Events", events_path %>
       </li>

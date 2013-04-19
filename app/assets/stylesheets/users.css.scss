@@ -2,8 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/*/
 
+
+/*All Users Index Page*/
 .peep_owl {
-	/*border: black 1px solid;*/
 	width: 300px;
 	height: 150px;
 	margin: 0 auto;
@@ -63,6 +64,21 @@
 	padding-left: 5px;
 	padding-right: 5px;
 }
+
+/*My Events Show Page*/
+.myevents {
+	margin-top: 30px;
+}
+
+.myface img{
+	height: 100px;
+	width: 100px;
+	border: 3px solid #ACC176;
+
+	text-align: center;
+
+}
+
 /*User Sign Up Page Style*/
 .form-actions{
 	background-color: #F5F5F5;

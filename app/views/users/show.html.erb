@@ -1,8 +1,11 @@
 <%#= image_tag @user.avatar.url %>
 <%#= image_tag @user.avatar.url(:medium) %>
-<%= image_tag @user.avatar.url(:thumb) %></br>
-<p><%= @user.name%></p>
-<h1 class = "page_title">My Event Listing</h1>
+
+<%#= @user.name%>
+<div class="row-fluid myevents">
+  <div class="span2 myface"><%= image_tag @user.avatar.url(:thumb) %></div>
+  <div class="span10"><h1 class = "page_title adj"> My Event Listing</h1></div>
+</div>
 <div class = "container">
 	<ul class = "thumbnails">
 		<% @user.events.each do |t|%>
