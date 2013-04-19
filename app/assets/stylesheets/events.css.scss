@@ -5,12 +5,21 @@
 .content-wrap {
 	width: 1000px;
 	margin: 0 auto;
-	border: 1px solid green;
+	/*border: 1px solid green;*/
 }
 
 .listed {
-	border: 1px solid red;
+/*	border: 1px solid red;*/
 	position: relative;
+	/*background-color: #f7f6f4;*/
+	/* box shadow */
+	-moz-box-shadow:    7px 8px 6px 6px #2c1c0d;
+  	-webkit-box-shadow: 7px 8px 6px 6px #2c1c0d;
+  	box-shadow:         7px 8px 6px -6px #2c1c0d;
+  	border-radius: 4px;
+
+background-image: -webkit-radial-gradient(left top, circle farthest-corner, #FFFFFF 0%, #F2F0F0 100%);
+
 }
 
 .event_avatar {
@@ -25,7 +34,7 @@
 .event_icon {
 	width: 104px;
 	height: 104px;
-	border: 2px solid blue;
+	/*border: 2px solid blue;*/
 	padding-top: 5%;
 	margin: 0 auto;
 }
@@ -35,7 +44,7 @@
 	height: 80%;
 	margin: 0 auto;
 	border-radius: 50%;
-	border: 2px black solid;
+	/*border: 2px black solid;*/
 	overflow: hidden;
 }
 
@@ -56,7 +65,7 @@
 }
 
 .add {
-	border: 1px solid black;
+	/*border: 1px solid black;*/
 	margin-top: 40px;
 	height: 40px;
 	background-size: contain;

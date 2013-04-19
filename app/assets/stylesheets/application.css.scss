@@ -12,6 +12,11 @@
  *= require application/layout
  *= require_tree .
  */
+
+.body {
+	background-color: #8CA93E;
+}
+
 .nav li {
 	line-height: 30px;
 }
@@ -31,21 +36,21 @@
   text-shadow: 0 1px 0 white;
 }
 .container {
-	outline: black solid 1px;
+	/*outline: black solid 1px;*/
 	padding-top: 70px;
 }
 
 .container1 {
-	outline: blue solid;
+	/*outline: blue solid;*/
 }
 
 .dropdown_wrapper {
-	border: 1px yellow solid;
+	/*border: 1px yellow solid;*/
 	height: 40px;
 }
 
 #cardview {
-	border: blue solid 1px;
+	/*border: blue solid 1px;*/
 	width: 50px;
 	float: right;
 }

@@ -3,11 +3,13 @@
 <head>
   <title>NameFace</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= stylesheet_link_tag "//fonts.googleapis.family=Source+Sans+Pro:400,700,900" %>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+
 </head>
-<body>
+<body class = "body">
     <%= render "/layouts/nav" %>
   <div class="container">
 
@@ -20,7 +22,7 @@
         <%= flash[:alert] %>
       </div>
     <% end %>
-    
+
     <%= yield %>
     <%= params %>
 
