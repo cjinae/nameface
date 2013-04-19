@@ -25,6 +25,7 @@ $('.wrongname').click(function(e) {
 $('.realname').click(function(e) {
 	console.log($(this).text());
 	e.stopPropagation();  //stops action from going one level up
+	$(this).css('color','#53777a');
 	flip(this);
 	// alert("Correct!");
 });
@@ -50,7 +51,7 @@ function flip(name) {
 		//animate complete
 		// '<div>Animation complete.</div>'
 		
-		this.src = '/assets/nameis.png';
+		this.src = '/assets/woohoo.jpg';
 		$(this).stop().animate({
 			width:''+width+'px',
 			height:''+height+'px',
