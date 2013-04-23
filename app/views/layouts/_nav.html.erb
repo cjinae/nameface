@@ -1,4 +1,7 @@
 <div class="navbar navbar-fixed-top">
+  <div id="user_nav">
+  <%= link_to "Sign in with Linked-In", "/auth/linkedin_oauth2" %>
+  </div>
   <div class="navbar-inner">
     <% if current_user %>
     <%= link_to '', user_path(current_user), class:"logo" %>

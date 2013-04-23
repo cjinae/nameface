@@ -27,6 +27,8 @@ gem "paperclip", "~> 3.0"
 
 gem 'sorcery'
 
+gem 'omniauth-linkedin-oauth2'
+
 group :development do
   gem 'better_errors'
   gem 'pry-rails'
