@@ -32,10 +32,14 @@
 	margin:0 auto;
 	height:250px;
 	margin-top:32px;
+	vertical-align: middle;
+	background-size: 250px 250px;
+	border-radius:50%;
+	background-repeat: no-repeat;
 }
 
 .faceis{
-	position:absolute;
+	/*position:absolute;*/
 	cursor:pointer;	
 	width:250px;
 	height:250px;

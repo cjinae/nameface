@@ -12,12 +12,44 @@ $(document).ready(function(){
 // 	}
 //  });
 
+$(function(){
+	$('img.faceis').each(function(){
+		var x = $(this);
+
+		var target = x.css('background-image')
+			// remove the right and left braces, g to continue finiding and replace with ''
+			.replace(/^url|[\)\()]/g, '');
+			// console.log(target);
+
+			x.wrap('<span style = "position: relative;"></span>')
+				.parent() //span elements
+				.prepend('<img>')
+				.find('img:first') // selector is now new blank image
+				.attr('src', target)
+
+			x.css({
+				'position' : 'absolute',
+				'left' : 0,
+				// 'top' : this.offsetTop
+			});
+
+			x.hover(function(){
+				x.stop().animate({
+					opacity: 0.4 
+				}, 250);
+			}, function(){
+				x.stop().animate({
+				 	opacity:1	
+				}, 3000);
+			});
+		});
+});
+
+
 $('.thumbnail .imgcontainer').click(function(){
 	console.log(this)
-	$(this).siblings('.namespacer').find('.namelist').slideToggle(300);
-	$(this).hover(function(){
-
-	})
+	var x = $(this);
+	x.siblings('.namespacer').find('.namelist').slideToggle(300);
 })
 
 
