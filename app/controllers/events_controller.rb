@@ -44,7 +44,6 @@ before_filter :uniq_title, :only => :add_event_to_user
        redirect_to user_path(z)
 	end
 
-
   	def add_event_to_user
      	z = User.find(params[:current_user])
      	x = Event.find_by_title(params[:event_title])

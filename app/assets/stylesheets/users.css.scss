@@ -23,14 +23,15 @@
 .thumbnail {
 	background-color: #FBFBFB;
   	border: 1px solid white;
+  	width: 100%;
+  	position: relative;
 }
 
 .imgcontainer{
-	width:100%;
+	width:250px;
 	margin:0 auto;
-	height:260px;
+	height:250px;
 	margin-top:32px;
-	position:relative;
 }
 
 .faceis{
@@ -38,7 +39,6 @@
 	cursor:pointer;	
 	width:250px;
 	height:250px;
-	left:57px;
 	border-radius:50%;
 }
 .nameis{
@@ -46,7 +46,6 @@
 	cursor:pointer;
 	width:250px;
 	height:250px;
-	left:57px;
 	border-radius:50%;
 }
 

@@ -35,8 +35,7 @@ class UsersController < ApplicationController
   end
 
   def check_uniq
-    
-
+  
   end
 
 # if current_user.events includes? :event_title  don't add event to user

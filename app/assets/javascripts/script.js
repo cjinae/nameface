@@ -15,7 +15,11 @@ $(document).ready(function(){
 $('.thumbnail .imgcontainer').click(function(){
 	console.log(this)
 	$(this).siblings('.namespacer').find('.namelist').slideToggle(300);
+	$(this).hover(function(){
+
+	})
 })
+
 
 $('.wrongname').click(function(e) {
   console.log($(this).text());
