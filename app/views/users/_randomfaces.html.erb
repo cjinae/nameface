@@ -1,0 +1,7 @@
+
+<ul class = "thumbnails">	
+	<% @random_users.each do |user| %>	
+		<%= render "/events/faceloop", :user => user %>
+	<% end %>
+</ul>
+

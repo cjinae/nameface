@@ -2,14 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/*/
 
-$fontCore: 'Source Sans Pro', sans-serif;
-$yellow: #DBD518;
-$yellowOwl: #fec128;
-$brown: #2c1c0d;
-$brownOwl: #744a23;
-$green: #8CA93E;
-$greenDark: #789136;
-$beige: #F6FA9C;
+@import "variables";
 
 .content-wrap {
 	width: 1000px;
@@ -20,9 +13,9 @@ $beige: #F6FA9C;
 	position: relative;
   	border-radius: 10px;
   	background: rgba(251, 251, 251, 0.3);
-	-moz-box-shadow:    3px 3px 5px 3px #D3D3D3;
-  	-webkit-box-shadow: 3px 3px 5px 3px #D3D3D3;
-  	box-shadow:         0 4px 9px -6px #3F3E43;
+	   -moz-box-shadow:    3px 3px 5px 3px #D3D3D3;
+  	 -webkit-box-shadow: 3px 3px 5px 3px #D3D3D3;
+  	 box-shadow:         0 4px 9px -6px #3F3E43;
 }
 
 .event_avatar {
@@ -48,9 +41,15 @@ $beige: #F6FA9C;
 	margin: 0 auto;
 	border-radius: 50%;
 	overflow: hidden;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+        .wide {height: auto;}
+        .tall {width: auto;}
+  }
 }
 
-.cont img.wide {
+/*.cont img.wide {
 	max-width: 100%;
 	max-height: 100%;
 	height: auto;
@@ -60,7 +59,7 @@ $beige: #F6FA9C;
 	max-height: 100%;
 	max-width: 100%;
 	width: auto;
-}
+}*/
 
 
 /* Create New Events Page Style*/
@@ -91,9 +90,9 @@ $beige: #F6FA9C;
   line-height: 50px;
   border-radius: 3px;
   background: -moz-linear-gradient(
-  top,
-  $brownOwl 0%,
-  $brownOwl);
+              top,
+              $brownOwl 0%,
+              $brownOwl);
   background: -webkit-gradient(
   linear, left top, left bottom,
   from($brownOwl),
@@ -110,43 +109,37 @@ $beige: #F6FA9C;
   text-shadow:
   0px -1px 0px rgba(000,000,000,0.7),
   0px 1px 0px rgba(255,255,255,0.3);
-}
-.landing-button:hover{
-  background: -moz-linear-gradient(
-  top,
-  $brownOwl 0%,
-  $brownOwl);
+
+&:hover{
+  background: -moz-linear-gradient(top,
+                                  $brownOwl 0%,
+                                  $brownOwl);
   background: -webkit-gradient(
-  linear, left top, left bottom,
-  from($brownOwl),
-  to($brownOwl));
+                                linear, left top, left bottom,
+                                from($brownOwl),
+                                to($brownOwl));
   color:$yellow;
-  text-decoration: none;
+  text-decoration: none;}
 }
+
 .green {
-  background: -moz-linear-gradient(
-  top,
-  $green 0%,
-  $greenDark);
-  background: -webkit-gradient(
-  linear, left top, left bottom,
-  from($green),
-  to($greenDark));
-}
-
-.green:hover{
-  background: -moz-linear-gradient(
-  top,
-  $greenDark 0%,
-  $green);
-  background: -webkit-gradient(
-  linear, left top, left bottom,
-  from($greenDark),
-  to($green));
+  background: -moz-linear-gradient(top,
+                                  $green 0%,
+                                  $greenDark);
+  background: -webkit-gradient( linear, left top, left bottom,
+                                from($green),
+                                to($greenDark));
+&:hover {
+  background: -moz-linear-gradient(top,
+                                  $greenDark 0%,
+                                  $green);
+  background: -webkit-gradient(linear, left top, left bottom,
+                              from($greenDark),
+                              to($green));
   color:$yellow;
-  text-decoration: none;
+  text-decoration: none; }
+  
 }
-
 
 
 

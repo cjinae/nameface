@@ -1,0 +1,32 @@
+<li class = "span4">
+	<div class = "thumbnail">
+		<div class = "imgcontainer">
+			<img class = "nameis" src ="assets/woohoo.jpg"/>
+			<img class = "faceis" src = "<%=user.avatar.url(:medium) %>" >
+		</div>
+		<div class = "namespacer">
+			<div class="namelist">
+				<% x = rand(3) %>
+				<% if x == 0 %>
+					<% wrong_users = User.where("id NOT IN (?)", [user]).sample(2) %>
+					<% wrong_users.map(&:first_name).each do |name| %>
+						<h3 class ="picknames wrongname"><%= name %></h3>			
+					<% end %>
+					<h3 class="picknames realname"><%= user.firstname %></h3>
+				<% elsif x == 1 %>
+					<h3 class="picknames realname"><%= user.firstname %></h3>
+					<% wrong_users = User.where("id NOT IN (?)", [user]).sample(2) %>
+					<% wrong_users.map(&:first_name).each do |name| %>
+						<h3 class ="picknames wrongname"><%= name %></h3>		
+					<% end %>
+				<% else %>
+					<% wrong_users = User.where("id NOT IN (?)", [user]).sample(1) %>
+					<% wrong = User.where("id NOT IN (?)", [user, wrong_users[0]]).sample(1) %>
+					<h3 class ="picknames wrongname"><%= wrong_users[0].firstname %></h3>
+					<h3 class="picknames realname"><%= user.firstname %></h3>
+					<h3 class ="picknames wrongname"><%= wrong[0].firstname %></h3>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</li>

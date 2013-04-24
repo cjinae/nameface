@@ -19,7 +19,7 @@ $('.thumbnail .imgcontainer').click(function(){
 
 $('.wrongname').click(function(e) {
   console.log($(this).text());
-  $(this).text( "woo?")
+  $(this).text( "hoo?")
 });
 
 $('.realname').click(function(e) {

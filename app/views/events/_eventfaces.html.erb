@@ -1,0 +1,5 @@
+<ul class = "thumbnails">	
+	<% @eventusers.each do |user| %>	
+		<%= render "/events/faceloop", :user => user %>
+	<% end %>
+</ul>

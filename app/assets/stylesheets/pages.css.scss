@@ -1,19 +1,10 @@
 /*// Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/*/
-$fontCore: 'Source Sans Pro', sans-serif;
 
-$yellow: #DBD518;
-$yellowOwl: #fec128;
-$brown: #2c1c0d;
-$brownOwl: #744a23;
-$green: #8CA93E;
-$greenDark: #789136;
-$beige: #F6FA9C;
+@import "variables";
 
 .pages-container{
-  font-family: $fontCore;
-
   #bg {
     position: fixed;
     top: 0;
@@ -25,7 +16,6 @@ $beige: #F6FA9C;
   }
 
   .hero {
-
     .span12 {
       padding:25px;
       background-color: rgba(255,255,255,0);

@@ -12,18 +12,15 @@ class SessionsController < ApplicationController
   #   end
   # end
 
-  # def destroy
-  #   logout
-  #   redirect_to :root, notice: "Bye... Hope to see you later!"
-  # end
-
- def create
-   user = User.from_omniauth(auth_hash)
+  def create
+    user = User.from_omniauth(env['omniauth.auth'])
+    session[:user_id] = user.id
+    redirect_to user_path(current_user), notice: "Signed in."
   end
 
-  protected
-
-  def auth_hash
-    request.env['omniauth.auth']
+  def destroy
+    logout
+    redirect_to :root, notice: "Bye... Hope to see you later!"
   end
+
 end

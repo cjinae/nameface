@@ -13,20 +13,14 @@
  *= require_tree .
  */
 
-$yellow: #DBD518;
-$yellowOwl: #fec128;
-$brown: #2c1c0d;
-$brownOwl: #744a23;
-$green: #8CA93E;
-$greenDark: #789136;
-$beige: #F6FA9C;
+@import "variables";
 
 .body {
 	background-color: $green;
 }
 
 .page_title {
-	color: #383530; 
+	color: $grey; 
 	font-size: 70px;
 	margin-top: 50px;
 }
@@ -42,7 +36,7 @@ $beige: #F6FA9C;
 
 .navbar {
   .navbar-inner {
-    background-color: #383530;
+    background-color: $grey;
     background-image: none;
     a {
     font-size:20px;
@@ -77,9 +71,6 @@ $beige: #F6FA9C;
 	padding-top: 40px;
 }
 
-.container1 {
-}
-
 .dropdown_wrapper {
 	height: 40px;
 }
@@ -109,13 +100,12 @@ input[type="submit"].dropdown_submit {
 	color:#f3f3f3;
 	font-size:1.1em;
 	float: right;
-}
 
-.dropdown_submit:hover, .dropdown_submit:focus{
+&:hover, &:focus{
 	background-color :#399630; /*background darker*/
 	/*reduce the drop shadow size for pushed button effect*/
 	-webkit-box-shadow: 0 0 1px rgba(0,0,0, .75);
 	-moz-box-shadow: 0 0 1px rgba(0,0,0, .75);
-	box-shadow: 0 0 1px rgba(0,0,0, .75);
+	box-shadow: 0 0 1px rgba(0,0,0, .75);}
 
 }
