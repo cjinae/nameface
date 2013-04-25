@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
 # before_filter :require_login, :only => :uniq_title
-before_filter :uniq_title, :only => :add_event_to_user 
+# before_filter :uniq_title, :only => :add_event_to_user 
 
 	def index
 		@events = Event.all params[:title]
@@ -38,30 +38,32 @@ before_filter :uniq_title, :only => :add_event_to_user
 	end
 
 	def remove_event_from_user
-		z = User.find(params[:current_user])
 		x = Event.find_by_title(params[:event_title])
-       z.events.delete(x)
-       redirect_to user_path(z)
+       current_user.events.delete(x)
+       redirect_to user_path(current_user)
 	end
 
   	def add_event_to_user
-     	z = User.find(params[:current_user])
      	x = Event.find_by_title(params[:event_title])
-	   	z.events << x
-	   	# redirect_to user_path(z)
-	   	redirect_to events_path      	
-	    flash[:notice] =  params[:event_title]
+     	assignment = current_user.assignments.build( :event => x )
+	   	if assignment.save
+		   	# redirect_to user_path(current_user)
+		    flash[:notice] =  params[:event_title]
+		else
+		    flash[:alert] =  "You already added this event"
+		end
+	   	redirect_to events_path
   	end
 
-protected 
+# protected 
 
-  	def uniq_title
-  		z = User.find(params[:current_user])
-  		x = z.events
-  		if x.any? {|h| h[:title] == params[:event_title]}
-  			redirect_to events_path
-  			flash[:alert] = "You already added this event"
-  		end
-  	end
+#   	def uniq_title
+#   		z = User.find(params[:current_user])
+#   		x = z.events
+#   		if x.any? {|h| h[:title] == params[:event_title]}
+#   			redirect_to events_path
+#   			flash[:alert] = "You already added this event"
+#   		end
+#   	end
 
 end

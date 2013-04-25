@@ -13,3 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+$(function() {
+	$("*").on("ajax:success", function(e) {
+		$(this).html("w00t!");
+		console.log(this);
+		e.stopPropagation();
+	});
+});
