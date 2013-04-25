@@ -3,7 +3,9 @@
 		<!-- <div class = "imgcontainer" style="background-image: url(<%#=user.avatar.url(:medium) %>);border: 1px solid black;"> -->
 		<div class = "imgcontainer">
 			<!-- <img class = "nameis" src ="assets/woohoo.jpg" style = "background-image: url(assets/woohoo.jpg);"/> -->
-			<img class = "faceis desaturate" src = "<%=user.avatar.url(:medium)%>" style = "background-image: url(assets/overlay.png);" />
+			<div class = "border">
+				<img class = "faceis desaturate" src = "<%=user.avatar.url(:medium)%>" style = "background-image: url(assets/overlay.png);" />
+			</div>
 		</div>
 		<div class = "namespacer">
 			<div class="namelist">

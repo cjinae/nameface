@@ -32,7 +32,6 @@ $(function(){
 		x.css({
 			'position' : 'absolute',
 			'left' : 0,
-			// 'top' : this.offsetTop
 		});
 
 		x.hover(function(){
@@ -66,12 +65,7 @@ $('.realname').click(function(e) {
 	var x = $(this)
 	x.css('color','#53777a');
 	x.siblings('.wrongname').remove();
-	// var y = x.parents('.namespacer').siblings('.imgcontainer').find('.faceis');
-	// y.removeClass('desaturate');
-	// console.log(y)
 	flip(this);
-	
-	// alert("Correct!");
 });
 
 //flip action
@@ -92,6 +86,7 @@ function flip(name) {
 		marginLeft:''+margin+'px',
 		opacity:'0.5'
 	}, 500, function (){
+		$(this).removeClass('desaturate')
 		//animate complete
 		// '<div>Animation complete.</div>'
 		
@@ -102,7 +97,6 @@ function flip(name) {
 			marginLeft:'0',
 			opacity:'1'
 		}, 500, function() {
-			$(this).removeClass('desaturate')
 			// unbind the click event from this
 			// $(this).unbind('click')
 		});
