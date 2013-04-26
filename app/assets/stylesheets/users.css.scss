@@ -17,6 +17,20 @@
 	margin-bottom: -55px;
 }
 
+.pointPlus {
+	position: absolute;
+	display: none;
+	font-size: 20px;
+	color: $yellowOwl;
+}
+
+.pointMinus {
+	position: absolute;
+	display: none;
+	font-size: 20px;
+	color: $yellowOwl;
+}
+
 .correct {
 	color: #53777a;
 }
@@ -26,7 +40,6 @@
   	position: relative;
   	border: none;
   	box-shadow: none;
-
 }
 
 .imgcontainer{
@@ -39,26 +52,6 @@
 	border-radius:50%;
 	background-repeat: no-repeat;
 }
-
-
-/*@-webkit-keyframes rotate {
-from {
--webkit-transform: rotate(0deg);
-}
-to { 
--webkit-transform: rotate(60deg);
-}
-}
-
-@-moz-keyframes rotate {
-from 
-{
-  -moz-transform: rotate(0deg);
-}
-to { 
--moz-transform: rotate(60deg);
-}
-}*/
 
 .border {
 	width:250px;

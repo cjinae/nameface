@@ -34,12 +34,4 @@ class UsersController < ApplicationController
     @user = User.find params[:id]
   end
 
-  def check_uniq
-  
-  end
-
-# if current_user.events includes? :event_title  don't add event to user
-
-
-
 end

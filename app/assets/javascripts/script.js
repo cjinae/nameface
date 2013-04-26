@@ -12,7 +12,7 @@ $(document).ready(function(){
 // 	}
 //  });
 
-$(function(){
+$(function tooltip(){
 	$('[rel=tooltip]').tooltip();
 });
 
@@ -24,19 +24,43 @@ $('.thumbnail .imgcontainer').click(function(){
 	// $(this).find('.overlay').css('visibility','hidden');
 });
 
-$('.wrongname').click(function(e) {
-  console.log($(this).text());
-  $(this).text( "hoo?")
+$('.wrongname').click(function(evt) {
+  // console.log($(this).text());
+  wrongAnswer.call(this);
+  $('.pointMinus').css({
+			top: evt.pageY+10,
+			bottom: evt.pageY+5,
+			right: evt.pageX+5,
+			left: evt.pageX+10
+		}).fadeIn('slow',function(){
+			$(this).fadeOut('slow');
+		});	
 });
 
-$('.realname').click(function(e) {
-	console.log($(this).text());
-	e.stopPropagation();  //stops action from going one level up
+function wrongAnswer(){
+	$(this).text( "hoo?")
+};
+
+$('.realname').one('click', function(evt) {
+	rightAnswer.call(this);
+	$('.pointPlus').css({
+			top: evt.pageY+10,
+			bottom: evt.pageY+5,
+			right: evt.pageX+5,
+			left: evt.pageX+10
+		}).fadeIn('slow',function(){
+			$(this).fadeOut('slow');
+		});	
+});
+
+function rightAnswer(){
+	//stops action from going one level up
+	// e.stopPropagation();  
 	var x = $(this)
 	x.css('color','#53777a');
 	x.siblings('.wrongname').remove();
 	flip(this);
-});
+};
 
 //flip action
 var margin =$(".faceis").width()/2;
@@ -50,7 +74,7 @@ function flip(name) {
 		marginLeft:''+margin+'px',
 		opacity:'0.5'
 	}, 500, function (){
-		$(this).find('.faceis').removeClass('desaturate') 
+		$(this).find('.faceis').removeClass('desaturate')
 		//animate complete
 		// '<div>Animation complete.</div>'
 		
@@ -67,6 +91,15 @@ function flip(name) {
 	});
 }
 
+
+var num = parseInt($.trim($('.points').html()));
+$('.realname').one('click', function(){
+	$('.points').html(num+=2	)
+});
+
+$('.wrongname').one('click', function(){
+	$('.points').html(num-=1)
+});
 
 
 

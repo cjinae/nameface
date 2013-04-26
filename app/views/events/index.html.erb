@@ -23,6 +23,7 @@
 								</div>
 								<div class = "span2">
 									<% if logged_in? %>
+									<%# if valid? ??????????????????? %>
 									<%= link_to "Add", {:controller => :events, 
 															:action => 'add_event_to_user', 
 															:event_title => t.title}, class: "landing-button", remote: true %>

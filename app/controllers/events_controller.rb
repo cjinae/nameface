@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
 # before_filter :require_login, :only => :uniq_title
-# before_filter :uniq_title, :only => :add_event_to_user 
+# before_filter :uniq_title, :only => :add_event_to_user
 
 	def index
 		@events = Event.all params[:title]
