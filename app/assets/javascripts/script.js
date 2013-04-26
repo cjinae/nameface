@@ -12,46 +12,16 @@ $(document).ready(function(){
 // 	}
 //  });
 
-
-// animate on hover of face  -> change this later so that on hover thought bubble appears
 $(function(){
-	$('img.faceis').each(function(){
-		var x = $(this);
-
-		var target = x.css('background-image')
-			// remove the right and left braces, g to continue finiding and replace with ''
-			.replace(/^url|[\)\()]/g, '');
-			console.log(target);
-
-		x.wrap('<span style = "position: relative;"></span>')
-			.parent() //span elements
-			.prepend('<img class = "overlay">')
-			.find('img:first') // selector is now new blank image
-			.attr('src', target)
-
-		x.css({
-			'position' : 'absolute',
-			'left' : 0,
-		});
-
-		x.hover(function(){
-			x.stop().animate({
-				opacity: 0.4 
-			}, 250);
-		}, function(){
-			x.stop().animate({
-			 	opacity:1	
-			}, 250);
-		});
-	});
+	$('[rel=tooltip]').tooltip();
 });
 
-// remove guess background on click of names
+//remove guess background on click of names
 // animate on click of names
 $('.thumbnail .imgcontainer').click(function(){
 	console.log(this)
 	$(this).siblings('.namespacer').find('.namelist').slideToggle(300);
-	$(this).find('.overlay').css('visibility','hidden');
+	// $(this).find('.overlay').css('visibility','hidden');
 });
 
 $('.wrongname').click(function(e) {
@@ -74,19 +44,13 @@ var width =$(".faceis").width();
 var height =$(".faceis").height();
 
 function flip(name) {
-	$(".nameis").stop().css({
-		width:'0px',
-		height:''+height+'px',
-		marginLeft:''+margin+'px',
-		opacity:'0.5'
-	});
-	$(name).closest('div').parent('.namespacer').siblings('.imgcontainer').find('.faceis').animate({
+	$(name).closest('div').parent('.namespacer').siblings('.imgcontainer').find('.border').animate({
 		width:'0px',
 		height:''+height+'px',
 		marginLeft:''+margin+'px',
 		opacity:'0.5'
 	}, 500, function (){
-		$(this).removeClass('desaturate')
+		$(this).find('.faceis').removeClass('desaturate') 
 		//animate complete
 		// '<div>Animation complete.</div>'
 		
@@ -102,20 +66,6 @@ function flip(name) {
 		});
 	});
 }
-
-// select cardview count
-// $("select").change(function () {
-  // var str = "";
-  // $("select option:selected").each(function () {
-            // find form 
-            // .submit
-            // str += $(this).text() + " ";
-  // });
-  // $("div").text(str);
-// })
-// .change();
-
-
 
 
 

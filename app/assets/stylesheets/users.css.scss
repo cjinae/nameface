@@ -26,6 +26,7 @@
   	position: relative;
   	border: none;
   	box-shadow: none;
+
 }
 
 .imgcontainer{
@@ -74,14 +75,34 @@ to {
 	height:250px;
 	border-radius:50%;
 	overflow: hidden;
-	z-index: -1;
-	  	&:hover {
-	  		-webkit-transform: rotate(8deg); 
-			-moz-transform: rotate(8deg); 
-			-o-transform: rotate(8deg);
-			-ms-transform: rotate(8deg); 
-		};
+	z-index: -100;
+  	&:hover {
+  		-webkit-transform: rotate(8deg); 
+		-moz-transform: rotate(8deg); 
+		-o-transform: rotate(8deg);
+		-ms-transform: rotate(8deg); 
+	};
+}
 
+.tooltip {
+	padding-bottom: 20px;
+	z-index: 0;
+}
+
+.tooltip-inner {
+	background-color: $green;
+	line-height: 1.4;
+	font-size: 20px;
+}
+
+.tooltip-arrow{
+	border-style: $green;
+	opacity: 0.4;
+	padding-bottom: 15px;
+}
+
+a.bubble{
+	display: inline-block;
 }
 
 .desaturate {

@@ -4,7 +4,9 @@
 		<div class = "imgcontainer">
 			<!-- <img class = "nameis" src ="assets/woohoo.jpg" style = "background-image: url(assets/woohoo.jpg);"/> -->
 			<div class = "border">
-				<img class = "faceis desaturate" src = "<%=user.avatar.url(:medium)%>" style = "background-image: url(assets/overlay.png);" />
+				<a rel="tooltip" title="take a guess!" class = "bubble">
+					<img class = "faceis desaturate" src = "<%=user.avatar.url(:medium)%>"/>
+				</a>
 			</div>
 		</div>
 		<div class = "namespacer">
