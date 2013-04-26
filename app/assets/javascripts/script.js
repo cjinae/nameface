@@ -13,7 +13,7 @@ $(document).ready(function(){
 //  });
 
 
-// animate on hover of face
+// animate on hover of face  -> change this later so that on hover thought bubble appears
 $(function(){
 	$('img.faceis').each(function(){
 		var x = $(this);

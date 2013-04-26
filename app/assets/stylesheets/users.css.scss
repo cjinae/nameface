@@ -64,7 +64,7 @@ to {
 	height:250px;
 	box-shadow: 2px 2px 5px rgba(0,0,0,0.5) inset,0 0 2px 1px rgba(0,0,0,0.05) inset;
 	border-radius:50%;
-	z-index: 1px;
+	z-index: 100;
 }
 
 .faceis{
@@ -75,36 +75,11 @@ to {
 	border-radius:50%;
 	overflow: hidden;
 	z-index: -1;
-/*	-webkit-transition: all 800ms cubic-bezier(0.445, 0.140, 0.720, 0.890); 
-	   -moz-transition: all 800ms cubic-bezier(0.445, 0.140, 0.720, 0.890); 
-	    -ms-transition: all 600ms cubic-bezier(0.445, 0.140, 0.720, 0.890); 
-	     -o-transition: all 600ms cubic-bezier(0.445, 0.140, 0.720, 0.890); 
-	        transition: all 600ms cubic-bezier(0.445, 0.140, 0.720, 0.890);*/
-/*	        -webkit-transition: all 0.2s ease-in;
-			-moz-transition: all 1s ease-in; 
-			-o-transition: all 1s ease-in; 
-			-ms-transition: all 1s ease-in; */
 	  	&:hover {
-/*	  		-webkit-animation-name:             rotate; 
-	  		-webkit-animation-duration:         1s; 
-	  		-webkit-animation-iteration-count:  1;
-	  		-webkit-animation-timing-function: linear;
-
-	  		-moz-animation-name:             rotate; 
-	  		-moz-animation-duration:         1s; 
-	  		-moz-animation-iteration-count:  1;
-	  		-moz-animation-timing-function: linear;*/
-
 	  		-webkit-transform: rotate(8deg); 
-			-moz-transform: rotate(360deg); 
-			-o-transform: rotate(360deg);
-			-ms-transform: rotate(360deg); 
-
-/*			 -webkit-transform: rotate(360deg); 
-			-moz-transform: rotate(360deg); 
-			-o-transform: rotate(360deg);
-			-ms-transform: rotate(360deg); 
-			-webkit-animation-iteration-count: 2; */
+			-moz-transform: rotate(8deg); 
+			-o-transform: rotate(8deg);
+			-ms-transform: rotate(8deg); 
 		};
 
 }
