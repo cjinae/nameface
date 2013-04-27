@@ -21,26 +21,45 @@
 }
 
 .listed-action {
-	border: 1px solid black;
-	width: 30%;
+	height:45px;
+	width: 100px;
 	margin: 0 auto;
 }
 
-.btn-first{
-	display: inline-block;
-}
+// .btn-first{
+// 	display: inline-block;
+// }
 
-.play{
-	width: 0px;
-	height: 0px;
-	border-style: solid;
-	border-width: 10px 0 10px 20px;
-	border-color: transparent transparent transparent #007bff;
-}
+.action {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	display: inline-block;}
+	.play {	
+		background: url("/assets/play.png") no-repeat;
+		background-color: $pink;
+		background-size: contain;
+		background-position-x: 3px;
+		opacity: 0.6;
+	}
+	.remove {
+		background: url("/assets/x.png") no-repeat;
+		background-color: $pink;
+		background-size:contain;
+		background-position-x: -1px;
+		opacity: 0.6;
+	}
 
-.btn-remove{
-	display: inline;
-}
+	.right {
+		float:right;
+	}
+	.left {
+		float: left;
+	}
+
+// .btn-remove{
+// 	display: inline;
+// }
 
 .event_avatar {
 	border-radius: 50%;

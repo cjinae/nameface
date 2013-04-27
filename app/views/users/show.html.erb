@@ -24,20 +24,19 @@
 								<p class = "event_title"><%= t.title %></p>
 								<p class = "event_description"><%= t.description %></p>
 							</div>
-							<div class = "listed-action">
-								<div class = "btn-first">
-									<div class = "play"></div>
-									<%= link_to "Play", event_path(t.id), class: "" %>
-								</div>
-								<div class = "btn-remove">
+							<ul class = "listed-action">
+								<li class = "action left">
+									<%= link_to "", event_path(t.id), class: "action play" %>
+								</li>
+								<li class = "action right">
 								<% if @user == current_user %>
-									<%= link_to "Remove",  {:controller => :events,
+									<%= link_to "",  {:controller => :events,
 																:action => 'remove_event_from_user',
 																:current_user => @user,
-																:event_title => t.title}, class: ""%>
+																:event_title => t.title}, class: "action remove"%>
 								<% end %>
-								</div>
-							</div>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>

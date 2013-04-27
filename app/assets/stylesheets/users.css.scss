@@ -3,11 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/*/
 
 @import 'variables';
-.play {
-	width: 100%;
-	height: 20px;
-	border: 1px solid black;	
-}
 
 
 /*All Users Index Page*/
@@ -89,13 +84,13 @@
 }
 
 .tooltip-inner {
-	background-color: $orange;
+	background-color: $pink;
 	line-height: 1.4;
 	font-size: 15px;
 }
 
 .tooltip-arrow{
-	border-style: $orange;
+	border-style: $pink;
 	opacity: 0.4;
 	// padding-bottom: 15px;
 }
