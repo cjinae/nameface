@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
 
 // $.ajax({
@@ -38,7 +39,8 @@ $('.wrongname').click(function(evt) {
 });
 
 function wrongAnswer(){
-	$(this).text( "hoo?")
+	$(this).css('text-decoration','line-through')	
+	// $(this).text( "hoo?")
 };
 
 $('.realname').one('click', function(evt) {
@@ -57,7 +59,7 @@ function rightAnswer(){
 	//stops action from going one level up
 	// e.stopPropagation();  
 	var x = $(this)
-	x.css('color','#53777a');
+	x.css('color','#3DA9A4');
 	x.siblings('.wrongname').remove();
 	flip(this);
 };

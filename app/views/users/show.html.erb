@@ -20,20 +20,21 @@
 									</div>
 								</div>
 							</div>
-							<div class = "span5">
+							<div class = "listed-inner">
 								<p class = "event_title"><%= t.title %></p>
 								<p class = "event_description"><%= t.description %></p>
 							</div>
-							<div class = "row-fluid">
-								<div class = "span2">
-									<%= link_to "Play", event_path(t.id), class: "landing-button" %>
+							<div class = "listed-action">
+								<div class = "btn-first">
+									<div class = "play"></div>
+									<%= link_to "Play", event_path(t.id), class: "" %>
 								</div>
-								<div class = "span2">
+								<div class = "btn-remove">
 								<% if @user == current_user %>
 									<%= link_to "Remove",  {:controller => :events,
 																:action => 'remove_event_from_user',
 																:current_user => @user,
-																:event_title => t.title}, class: "landing-button"%>
+																:event_title => t.title}, class: ""%>
 								<% end %>
 								</div>
 							</div>

@@ -1,14 +1,15 @@
-<div class = " dropdown_wrapper">
-	<%=form_tag(users_path, :method => 'get', :multipart => true) do %>
-		<%= submit_tag 'Go!', :class => "dropdown_submit" %>
-		<%= select_tag(:cardview, options_for_select([
+<div class = "play"></div>
+<!-- <div class = " dropdown_wrapper">
+	<%#=form_tag(users_path, :method => 'get', :multipart => true) do %>
+		<%#= submit_tag 'Go!', :class => "dropdown_submit" %>
+		<%#= select_tag(:cardview, options_for_select([
 			[3,'3'],
 			[6,'6'],
 			[9,'9'],
 			[12,'12']
 			], :selected => params[:cardview], :class => "dropdown"  ))%>
-	<%end%>
-</div>
+	<%#end%>
+</div>-->
 <%= render "/users/randomfaces" %>
 
 <script>
