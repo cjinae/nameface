@@ -1,7 +1,19 @@
 <h1 class = "page_title">Event Listing</h1>
-
-
-
+<script type="text/javascript">
+	events = <%=raw @events.to_json %>;
+</script>
+<div class="search" ng-controller="SearchController">
+	<%# debug @events.to_json %>
+	Search: <input ng-model = "searchText">	
+	{{name}}
+	<table id="searchTextResults">
+		<!-- title and description -->
+	<tr ng-repeat="event in events">
+		<td>{{event.title}}</td>
+		<td>{{event.description}}</td>
+	</tr>
+	</table>
+</div>
 
 
 
