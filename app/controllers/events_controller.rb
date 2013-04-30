@@ -3,7 +3,9 @@ class EventsController < ApplicationController
 # before_filter :uniq_title, :only => :add_event_to_user
 
 	def index
-		@events = Event.all params[:title]
+		# @events = Event.all params[:title]
+		x = current_user.events
+		@events = Event.where("id NOT IN (?)", x)
 		@current_user = current_user
 	end
 
