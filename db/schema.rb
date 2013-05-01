@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130423193027) do
+ActiveRecord::Schema.define(:version => 20130424031651) do
 
   create_table "assignments", :force => true do |t|
     t.integer "user_id"
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(:version => 20130423193027) do
     t.string   "uid"
     t.string   "token"
     t.string   "secret"
+    t.string   "picture_url"
   end
 
 end

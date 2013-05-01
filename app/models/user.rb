@@ -45,4 +45,9 @@ class User < ActiveRecord::Base
     end
   end
 
+  def other_user_events
+    x = self.events
+    Event.where("id NOT IN (?)", x)
+  end
+
 end

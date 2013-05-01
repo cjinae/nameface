@@ -25,6 +25,7 @@ gem 'jquery-rails'
 gem 'kaminari-bootstrap'
 gem "paperclip", "~> 3.0"
 
+
 gem 'sorcery'
 
 gem 'omniauth-linkedin-oauth2'
@@ -35,6 +36,9 @@ group :development do
   gem 'letter_opener'
 end
 
+group :test, :development do
+  gem 'factory_girl_rails'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

@@ -5,17 +5,13 @@
 <div class="search" ng-controller="SearchController">
 	<%# debug @events.to_json %>
 	Search: <input ng-model = "searchText">	
-	{{name}}
-	<table id="searchTextResults">
-		<!-- title and description -->
-	<tr ng-repeat="event in events">
-		<td>{{event.title}}</td>
-		<td>{{event.description}}</td>
-	</tr>
-	</table>
+	<div id="searchTextResults">
+	<div ng-repeat="event in events | filter:searchText">
+		<div>{{event.title}}</td>
+		<div>{{event.description}}</td>
+	</div>
+	</div>
 </div>
-
-
 
 
 <div class = "container">
