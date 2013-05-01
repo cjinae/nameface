@@ -6,8 +6,6 @@ class EventsController < ApplicationController
 	def index
 		# @events = Event.all params[:title]
 		@events = current_user.available_events
-		# x = current_user.events
-		# @events = Event.where("id NOT IN (?)", x)
 		@current_user = current_user
 	end
 

@@ -25,18 +25,11 @@ class User < ActiveRecord::Base
 
   def available_events
     x = self.events
-
     if x.present?
       Event.where("id NOT IN (?)", x)
     else
       Event.all
     end
-
-    # if x.length > 0
-    #   Event.where("id NOT IN (?)", x)
-    # else
-    #   Event.scoped
-    # end
   end
 
   def self.get_random_user(number_of_cards)
@@ -45,20 +38,43 @@ class User < ActiveRecord::Base
   end
 
   def self.from_omniauth(auth)
-    where(auth.slice("provider", "uid")).first || create_from_omniauth(auth)
+    user = where(auth.slice("provider", "uid")).first_or_initialize
+
+    raise auth.info.inspect
+
+    %w(first_name last_name email).each do |s|
+      user.send("#{s}=".to_sym, auth.info.send(s.to_sym))
+    end
+
+    user.picture_url = auth.info.image
+    user.token = auth.credentials.token
+    user.secret = auth.credentials.secret
+    user.save!
+
+    return user
+
+    # user.first_name = auth.info.first_name
+    # user.last_name = auth.info.last_name
+    # user.picture_url = auth.info.picture_url
+    # user.email = auth.info.email
+    # user.token = auth.credentials.token
+
+    # || create_from_omniauth(auth)
   end
   
-  def self.create_from_omniauth(auth)
-    create! do |user|
-      user.provider = auth["provider"]
-      user.uid = auth["uid"]
-      user.first_name = auth.info.first_name
-      user.last_name = auth.info.last_name
-      user.email = auth.info.email
-      user.token = auth.credentials.token
-      user.secret = auth.credentials.secret
-
-    end
-  end
+  # def self.create_from_omniauth(auth)
+  #   raise "wut"
+  #   raise auth.info.inspect
+  #   create! do |user|
+  #     user.provider = auth["provider"]
+  #     user.uid = auth["uid"]
+  #     user.first_name = auth.info.first_name
+  #     user.last_name = auth.info.last_name
+  #     user.picture_url = auth.info.picture_url
+  #     user.email = auth.info.email
+  #     user.token = auth.credentials.token
+  #     user.secret = auth.credentials.secret
+  #   end
+  # end
 
 end
