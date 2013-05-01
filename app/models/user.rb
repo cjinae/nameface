@@ -23,6 +23,22 @@ class User < ActiveRecord::Base
     "#{first_name}"
   end
 
+  def available_events
+    x = self.events
+
+    if x.present?
+      Event.where("id NOT IN (?)", x)
+    else
+      Event.all
+    end
+
+    # if x.length > 0
+    #   Event.where("id NOT IN (?)", x)
+    # else
+    #   Event.scoped
+    # end
+  end
+
   def self.get_random_user(number_of_cards)
     # find(:all).sample(1)
     User.order("random()").first(number_of_cards.to_i)
@@ -43,11 +59,6 @@ class User < ActiveRecord::Base
       user.secret = auth.credentials.secret
 
     end
-  end
-
-  def other_user_events
-    x = self.events
-    Event.where("id NOT IN (?)", x)
   end
 
 end

@@ -36,8 +36,12 @@ group :development do
   gem 'letter_opener'
 end
 
-group :test, :development do
+group :development, :test do
   gem 'factory_girl_rails'
+  gem 'rspec-rails'
+  gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git'
+  gem 'launchy'
+  gem 'database_cleaner'
 end
 
 # To use ActiveModel has_secure_password
