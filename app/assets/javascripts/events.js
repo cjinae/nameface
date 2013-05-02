@@ -10,6 +10,12 @@ $('.action').hover(function(){
 });
 
 
+// $('#add_event').on('click', function(event){
+// 	event.preventDefault();
+// 	var title = $(this).closest('p')
+// 	console.log(title)
+// $.post($(this).attr('data-href') + "?title=" + $('#title').val(), function(data){} );
+// });
 
 
 })
