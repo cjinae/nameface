@@ -5,51 +5,54 @@
 <div class="search" ng-controller="SearchController">
 	<%# debug @events.to_json %>
 	Search: <input ng-model = "searchText">	
-	<div id="searchTextResults">
+	<!-- <div id="searchTextResults"> -->
 	<div ng-repeat="event in events | filter:searchText">
-		<div>{{event.title}}</td>
-		<div>{{event.description}}</td>
+		<div>{{event.title}}</div>
+		<div>{{event.description}}</div>
 	</div>
-	</div>
+	<!-- </div> -->
 </div>
 
-
 <div class = "container">
-	<ul class = "thumbnails">
-		<% @events.each do |t|%>
-			<li class = "span12 listed">
-				<div class = "row-fluid">
-					<div class = "span12">
-						<div class = "row-fluid">
-							<div class = "span3">
-								<div class = "event_icon">
-									<div class = "cont">
-										<img class = "event_avatar" src= "<%= t.avatar %>">
+	<div class="search" ng-controller="SearchController">
+		Search: <input ng-model = "searchText">	
+		<ul class = "thumbnails">
+			<div ng-repeat="event in events | filter:searchText">
+				<li class = "span12 listed">
+					<div class = "row-fluid">
+						<div class = "span12">
+							<div class = "row-fluid">
+								<div class = "span3">
+									<div class = "event_icon">
+										<div class = "cont">
+											<img class = "event_avatar" src='{{event.avatar}}'>
+										</div>
 									</div>
 								</div>
+								<div class = "listed-inner">
+									<p class = "event_title">{{event.title}}</p>
+									<p class = "event_description">{{event.description}}</p>
+								</div>
+								<ul class = "listed-action">
+									<li class = "action left">
+										<a href="/events/{{event.id}}", class = "action play"></a>
+										<%#= link_to "", event_path('{{event.id}}'), class: "action play" %>
+									</li>
+									<li class = "action right">
+										<%# if logged_in? %>
+										<%#= link_to "Add", {:controller => :events, 
+																:action => 'add_event_to_user', 
+																:event_title => event.title}, class: "action remove", remote: true %>
+										<%# end %>
+									</li>
+								</ul>
 							</div>
-							<div class = "listed-inner">
-								<p class = "event_title"><%= t.title %></p>
-								<p class = "event_description"><%= t.description %></p>
-							</div>
-							<ul class = "listed-action">
-								<li class = "action left">
-									<%= link_to "", event_path(t.id), class: "action play" %>
-								</li>
-								<li class = "action right">
-									<% if logged_in? %>
-									<%= link_to "Add", {:controller => :events, 
-															:action => 'add_event_to_user', 
-															:event_title => t.title}, class: "action remove", remote: true %>
-									<% end %>
-								</li>
-							</ul>
 						</div>
 					</div>
-				</div>
-			</li>
-		<% end %>
-	</ul>
+				</li>
+			</div>
+		</ul>
+</div>
 </div>
 
 <script>
