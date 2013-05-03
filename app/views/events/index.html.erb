@@ -3,7 +3,7 @@
 	events = <%=raw @events.to_json %>;
 </script>
 
-<div class = "container">
+<div class = "container" ng-app="nameFace">
 	<div class="search" ng-controller="SearchController">
 		Search: <input ng-model = "searchText">	
 		<ul class = "thumbnails">
@@ -15,6 +15,7 @@
 								<div class = "span3">
 									<div class = "event_icon">
 										<div class = "cont">
+											<!-- event avatar is not working -->
 											<img class = "event_avatar" src='{{event.avatar}}'>
 										</div>
 									</div>
@@ -30,7 +31,10 @@
 									</li>
 									<li class = "action right">
 										<% if logged_in? %>
-										<%= link_to "Add", "#{add_event_to_user_events_path}?event_title={{event.title}}", class: "action remove", remote: true %>
+										<a href="<%=add_event_to_user_events_path%>?event_title={{event.title | escape}}" class="action remove" data-remote="true">
+											Add
+										</a>
+										<%#= link_to "Add", "#{add_event_to_user_events_path}?event_title={{event.title}}", class: "action remove", remote: true %>
 										<%#= link_to "Add", {:controller => :events, 
 																:action => 'add_event_to_user', 
 																:event_title => event.title}, class: "action remove", remote: true %>

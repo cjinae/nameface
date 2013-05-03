@@ -1,4 +1,4 @@
-<div class="navbar navbar-fixed-top">
+<div class="navbar">
   <div class="navbar-inner">
     <% if current_user %>
     <%= link_to '', user_path(current_user), class:"logo" %>
@@ -6,15 +6,15 @@
     <%= link_to '', root_path, class:"logo" %>
     <% end %>
     <ul class="nav">
-      <li class="<%= 'active' if params[:controller] == 'users' && params[:action] == 'index' %>"><%= link_to "Random Play", users_path %></li>
-      <li class="<%= 'active' if params[:controller] == 'events' && params[:action] == 'index' %>">
+      <li class="<%= 'selected' if params[:controller] == 'users' && params[:action] == 'index' %>"><%= link_to "Random Play", users_path %></li>
+      <li class="<%= 'selected' if params[:controller] == 'events' && params[:action] == 'index' %>">
         <%= link_to "All Events", events_path %>
       </li>
       <% if logged_in? %>
-          <li class="<%= 'active' if params[:controller] == 'users' && params[:action] == 'show' %>">
+          <li class="<%= 'selected' if params[:controller] == 'users' && params[:action] == 'show' %>">
           <%= link_to "My Events", user_path(current_user) %>
           </li>
-          <li ckass="<%= 'active' if params[:controller] == 'events' && params[:action] == 'new' %>">
+          <li class="<%= 'selected' if params[:controller] == 'events' && params[:action] == 'new' %>">
           <%= link_to "Create Events", new_event_path %>
           </li>
       <% end %>
@@ -22,7 +22,7 @@
 
   <div class="pull-right">
     <% if logged_in? %>
-      <%= link_to 'Logout', :session, :method => :delete, class: 'btn' %>
+      <%= link_to 'Logout', :session, :method => :delete, class: 'all-btn' %>
     <% else %>
       <%#= link_to 'Sign Up', [:new, :user], class: 'btn' %>
       <%= link_to 'Log In', '/auth/linkedin_oauth2' , class: 'btn' %>

@@ -5,17 +5,16 @@
 $(document).ready(function(){
 	
 $('.action').hover(function(){
-	$(this).css('opacity', '1');
-	// $(this).css('opacity','0.4');
+	$(this).toggleClass('dark');
 });
 
-
-// $('#add_event').on('click', function(event){
-// 	event.preventDefault();
-// 	var title = $(this).closest('p')
-// 	console.log(title)
-// $.post($(this).attr('data-href') + "?title=" + $('#title').val(), function(data){} );
-// });
-
+$(function() {
+	$("*").on("ajax:success", function(e) {
+		e.stopPropagation();
+		$(this).html("w00t!");
+		$(this).closest('li').remove();
+		console.log(this);
+	});
+});
 
 })
