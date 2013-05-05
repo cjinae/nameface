@@ -3,6 +3,7 @@ class Event < ActiveRecord::Base
     
     has_attached_file :avatar, :styles => { :asd => "250x250px", :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"  
 	validates :title, :presence => true, :uniqueness => true
+	validates_format_of :title, :with => /^[^0-9`!@#\$%\^&*+_=]+$/
   	validates :description, :presence => true
 
 	has_many :assignments

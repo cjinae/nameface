@@ -1,11 +1,11 @@
-<h1 class = "page_title">Event Listing</h1>
+<!-- <h1 class = "page_title">Event Listing</h1> -->
 <script type="text/javascript">
 	events = <%=raw @events.to_json %>;
 </script>
 
-<div class = "container" ng-app="nameFace">
+<div class = "container">
 	<div class="search" ng-controller="SearchController">
-		Search: <input ng-model = "searchText">	
+		<input ng-model = "searchText">	
 		<ul class = "thumbnails">
 			<div ng-repeat="event in events | filter:searchText">
 				<li class = "span12 listed">
@@ -31,10 +31,7 @@
 									</li>
 									<li class = "action right">
 										<% if logged_in? %>
-										<a href="<%=add_event_to_user_events_path%>?event_title={{event.title | escape}}" class="action remove" data-remote="true">
-											Add
-										</a>
-										<%#= link_to "Add", "#{add_event_to_user_events_path}?event_title={{event.title}}", class: "action remove", remote: true %>
+										<%= link_to "Add", "#{add_event_to_user_events_path}?event_title={{event.title}}", class: "action remove", remote: true %>
 										<%#= link_to "Add", {:controller => :events, 
 																:action => 'add_event_to_user', 
 																:event_title => event.title}, class: "action remove", remote: true %>
@@ -49,6 +46,8 @@
 		</ul>
 </div>
 </div>
+
+
 
 <script>
 	$(window).load(function(){

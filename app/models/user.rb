@@ -3,6 +3,8 @@ class User < ActiveRecord::Base
   # attr_accessible :email, :password, :password_confirmation, :first_name, :last_name, :cardview, :avatar
   
   has_attached_file :avatar, :styles => {:asd => "250x250px", :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"  
+  validates_format_of :first_name, :with => /^[^0-9`!@#\$%\^&*+_=]+$/
+  validates_format_of :last_name, :with => /^[^0-9`!@#\$%\^&*+_=]+$/
   # validates :first_name, :presence => true
   # validates :last_name, :presence => true
   # validates :email, :presence => true, :uniqueness => true

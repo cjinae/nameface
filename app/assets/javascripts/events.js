@@ -8,6 +8,11 @@ $('.action').hover(function(){
 	$(this).toggleClass('dark');
 });
 
+$('input').click(function(){
+	$(this).css('background-image', 'none');
+})
+
+
 $(function() {
 	$("*").on("ajax:success", function(e) {
 		e.stopPropagation();

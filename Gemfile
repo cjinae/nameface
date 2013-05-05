@@ -25,7 +25,6 @@ gem 'jquery-rails'
 gem 'kaminari-bootstrap'
 gem "paperclip", "~> 3.0"
 
-
 gem 'sorcery'
 
 gem 'omniauth-linkedin-oauth2'
@@ -38,10 +37,11 @@ end
 
 group :development, :test do
   gem 'factory_girl_rails'
-  gem 'rspec-rails'
   gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git'
   gem 'launchy'
   gem 'database_cleaner'
+  gem 'populator'
+  gem 'faker'
 end
 
 # To use ActiveModel has_secure_password
