@@ -4,8 +4,9 @@
 </script>
 
 <div class = "container">
+	<div class = "search-header blinkon"></div>
 	<div class="search" ng-controller="SearchController">
-		<input ng-model = "searchText">	
+		<input ng-model = "searchText" class = "search-entry">	
 		<ul class = "thumbnails">
 			<div ng-repeat="event in events | filter:searchText">
 				<li class = "span12 listed">
@@ -31,7 +32,7 @@
 									</li>
 									<li class = "action right">
 										<% if logged_in? %>
-										<%= link_to "Add", "#{add_event_to_user_events_path}?event_title={{event.title}}", class: "action remove", remote: true %>
+										<%= link_to "", "#{add_event_to_user_events_path}?event_title={{event.title}}", class: "action add", remote: true %>
 										<%#= link_to "Add", {:controller => :events, 
 																:action => 'add_event_to_user', 
 																:event_title => event.title}, class: "action remove", remote: true %>

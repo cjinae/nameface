@@ -1,11 +1,15 @@
 class EventsController < ApplicationController
-# before_filter :require_login, :only => :uniq_title
+before_filter :require_login, :only => :index
 # before_filter :uniq_title, :only => :add_event_to_user
 	# include EventsHelper
 	
 	def index
-		@events = current_user.available_events
-		@current_user = current_user
+		# if current_user
+			@events = current_user.available_events
+			@current_user = current_user
+		# else 
+			# @events = Event.all
+		# end
 	end
 
 	def new

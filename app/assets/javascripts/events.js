@@ -8,15 +8,17 @@ $('.action').hover(function(){
 	$(this).toggleClass('dark');
 });
 
-$('input').click(function(){
-	$(this).css('background-image', 'none');
+$('.search-entry').focusin(function(){
+	$('.search-header').removeClass('blinkon');
 })
 
+$('.search-entry').focusout(function(){
+	$('.search-header').addClass('blinkon');
+})
 
 $(function() {
 	$("*").on("ajax:success", function(e) {
 		e.stopPropagation();
-		$(this).html("w00t!");
 		$(this).closest('li').remove();
 		console.log(this);
 	});

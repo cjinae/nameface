@@ -26,20 +26,30 @@
 	width: 100px;
 	margin: 0 auto;
 }
-
-.search {
-	width: 100%;
+.search-header {
+	width: 300px;
 	height: 50px;
+	float: left;	
 }
 
-label, input, button, select, textarea {
+.blinkon {
 	background-image: url('/assets/search.gif');
+
+}
+
+// .search {
+// 	width: 100%;
+// 	height: 50px;
+// }
+
+input.search-entry {
+	opacity: 0.4;
 	border: none;
-	height: 50px;
-	margin-left: 37%;
-	text-align: center;
-	width: 300px;
+	height: 40px;
+	margin-left: -86px;
+	width: 200px;
 	font-size: 2.0em;
+	background-color: $greyLight;
 }
 
 .action {
@@ -56,6 +66,13 @@ label, input, button, select, textarea {
 	}
 	.remove {
 		background: url("/assets/x.png") no-repeat;
+		background-color: $pink;
+		background-size:contain;
+		background-position-x: -1px;
+		opacity: 0.6;
+	}
+	.add {
+		background: url("/assets/+.png") no-repeat;
 		background-color: $pink;
 		background-size:contain;
 		background-position-x: -1px;
