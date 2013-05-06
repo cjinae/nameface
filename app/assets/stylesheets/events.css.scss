@@ -12,7 +12,8 @@
 
 .listed {
 	position: relative;
-	border-top: 1px solid #DDD;
+	margin-bottom: 10px;
+	// border-top: 1px solid #DDD;
 }
 
 .listed-inner {
@@ -47,11 +48,15 @@ input.search-entry {
 	border: none;
 	height: 40px;
 	margin-left: -86px;
+	margin-top: 4px;
 	width: 200px;
 	font-size: 2.0em;
 	background-color: $greyLight;
 }
 
+textarea:focus, input:focus{
+    outline: none;
+}
 .action {
 	width: 40px;
 	height: 40px;
@@ -103,15 +108,16 @@ input.search-entry {
 	width: 104px;
 	height: 104px;
 	position: absolute;
-	top: -45px;
+	top: 45px;
 	right:0;
 }
 
 .cont {
-	width: 80%;
-	height: 80%;
+	width: 90%;
+	height: 90%;
 	margin: 0 auto;
 	border-radius: 50%;
+	border: 1px solid #DDD;
 	overflow: hidden;
     img {
       max-width: 100%;

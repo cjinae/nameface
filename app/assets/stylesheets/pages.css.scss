@@ -95,8 +95,9 @@
   letter-spacing: 1px;
   border-style: none;
   &:hover {
-    background-color: pink;
+    background-color: $pink;
     text-decoration: none;
+    color: white;
   }
 }
 

@@ -24,9 +24,13 @@
 }
 
 .page_title.adj {
-	margin-left: -70px;
+	margin-left: -94px;
 	margin-top: 29px;
 	font-size: 3em;
+}
+
+.navbar .navbar-inner .nav{
+	margin: 18px 32px 0 0;
 }
 
 .nav li {
@@ -52,7 +56,18 @@
 
 .navbar-inner .pull-right {
 	padding-right: 50px;
-	margin-top: 5px;
+	margin-top: 29px;
+}
+
+.hootext{
+	float: left;
+	// border: 1px solid black;
+	height: 50px;
+	width: 50px;
+	margin-top: -30px;
+	margin-left: 65px;
+	text-align: center;
+
 }
 
 .logo{
@@ -61,7 +76,7 @@
   font-size: 20px;
   font-weight: 200;
   margin-left:50px;
-  margin-top:5px;
+  margin-top:20px;
   color: #777777;
   text-shadow: 0 1px 0 white;
   background-image: url('/assets/owlgif.gif'); 
@@ -86,7 +101,7 @@
 }
 
 .btn {
-  color: pink;
+  color: $pink;
 }
 
 

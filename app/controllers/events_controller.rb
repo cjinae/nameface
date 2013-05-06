@@ -4,12 +4,8 @@ before_filter :require_login, :only => :index
 	# include EventsHelper
 	
 	def index
-		# if current_user
-			@events = current_user.available_events
-			@current_user = current_user
-		# else 
-			# @events = Event.all
-		# end
+		@events = current_user.available_events
+		# @current_user = current_user
 	end
 
 	def new

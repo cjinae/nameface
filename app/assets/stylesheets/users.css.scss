@@ -57,9 +57,8 @@
 .border {
 	width:250px;
 	height:250px;
-	box-shadow: 2px 2px 5px rgba(0,0,0,0.5) inset,0 0 2px 1px rgba(0,0,0,0.05) inset;
+	// box-shadow: 2px 2px 5px rgba(0,0,0,0.5) inset,0 0 2px 1px rgba(0,0,0,0.05) inset;
 	border-radius:50%;
-	z-index: 100;
 }
 
 .faceis{
@@ -69,7 +68,6 @@
 	height:250px;
 	border-radius:50%;
 	overflow: hidden;
-	z-index: -100;
   	&:hover {
   		-webkit-transform: rotate(8deg); 
 		-moz-transform: rotate(8deg); 
@@ -132,14 +130,15 @@ a.bubble{
 
 /*My Events Show Page*/
 .myevents {
-	margin-top: 30px;
+	// margin-top: 30px;
 }
 
 .myface img{
 	height: 100px;
 	width: 100px;
-	border: 3px solid #ACC176;
+	border-radius: 50%;
 	text-align: center;
+	box-shadow: 2px 2px 5px rgba(0,0,0,0.5) inset,0 0 2px 1px rgba(0,0,0,0.05) inset;
 }
 
 /*User Sign Up Page Style*/
