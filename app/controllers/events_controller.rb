@@ -5,7 +5,7 @@ before_filter :require_login, :only => :index
 	
 	def index
 		@events = current_user.available_events
-		# @current_user = current_user
+		@current_user = current_user
 	end
 
 	def new

@@ -8,7 +8,8 @@
 	<div class="search" ng-controller="SearchController">
 		<input ng-model = "searchText" class = "search-entry">	
 		<ul class = "thumbnails">
-			<div ng-repeat="event in events | filter:searchText">
+			<%#= debug @events.to_json%>
+			<div ng-repeat = "event in events | filter:searchText" >
 				<li class = "span12 listed">
 					<div class = "row-fluid">
 						<div class = "span12">
@@ -47,13 +48,3 @@
 </div>
 </div>
 
-
-
-<script>
-	$(window).load(function(){
-	 $('.cont').find('img').each(function(){
-	  var imgClass = (this.width/this.height > 1) ? 'wide' : 'tall';
-	  $(this).addClass(imgClass);
-	 })
-	})
-</script>

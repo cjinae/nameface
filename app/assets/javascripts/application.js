@@ -14,5 +14,8 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require angular
-//= require_tree .
+//= require script.js
+//= require events.js
+//= require_tree ./app/controllers
+
 
