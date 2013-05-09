@@ -1,11 +1,12 @@
 class EventsController < ApplicationController
-before_filter :require_login, :only => :index
-# before_filter :uniq_title, :only => :add_event_to_user
-	# include EventsHelper
 	
 	def index
-		@events = current_user.available_events
-		@current_user = current_user
+		if current_user
+			@events = current_user.available_events
+			@current_user = current_user
+		else
+			@events = Event.all
+		end
 	end
 
 	def new
@@ -46,25 +47,13 @@ before_filter :require_login, :only => :index
 
   	def add_event_to_user
      	x = Event.find_by_title(params[:event_title])
-     	assignment = current_user.assignments.build( :event => x )
+     	assignment = current_user.assignments.build(:event => x)
 	   	if assignment.save
-		   	# redirect_to user_path(current_user)
 		    flash[:notice] =  params[:event_title]
 		else
 		    flash[:alert] =  "You already added this event"
 		end
 	   	redirect_to events_path
   	end
-
-# protected 
-
-#   	def uniq_title
-#   		z = User.find(params[:current_user])
-#   		x = z.events
-#   		if x.any? {|h| h[:title] == params[:event_title]}
-#   			redirect_to events_path
-#   			flash[:alert] = "You already added this event"
-#   		end
-#   	end
 
 end

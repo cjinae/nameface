@@ -95,15 +95,19 @@
 	height: 40px;
 }
 
-#cardview {
+select#cardview {
 	width: 50px;
-	float: right;
+	// float: right;
+	border-radius: 0;
 }
 
 .btn {
   color: $pink;
 }
 
+.btn .right{
+	foat: right;
+}
 
 // cardselector
 input[type="submit"].dropdown_submit {
@@ -111,27 +115,11 @@ input[type="submit"].dropdown_submit {
     padding-left: 0px;
 }
 
-.dropdown_submit {
-	cursor:pointer; 
-	padding:5px 25px; 
-	background:#35b128; 
-	border:1px solid #33842a; /*required or the default border for the browser will appear*/
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	border-radius: 10px;
-	/*drop shadow*/
-	-webkit-box-shadow: 0 0 4px rgba(0,0,0, .75);
-		-moz-box-shadow: 0 0 4px rgba(0,0,0, .75);
-		box-shadow: 0 0 4px rgba(0,0,0, .75);
-	color:#f3f3f3;
-	font-size:1.1em;
-	float: right;
-
-&:hover, &:focus{
-	background-color :#399630; /*background darker*/
-	/*reduce the drop shadow size for pushed button effect*/
-	-webkit-box-shadow: 0 0 1px rgba(0,0,0, .75);
-	-moz-box-shadow: 0 0 1px rgba(0,0,0, .75);
-	box-shadow: 0 0 1px rgba(0,0,0, .75);}
-
+// media queries
+@media all and (max-width: 769px) {
+ body {
+  .navbar .navbar-inner .nav{
+    margin: 1px 1px 0 0;
+  }
+}
 }

@@ -37,15 +37,13 @@ class User < ActiveRecord::Base
   end
 
   def self.get_random_user(number_of_cards)
-    # find(:all).sample(1)
     User.order("random()").first(number_of_cards.to_i)
   end
 
+# For future enhancement: linked in sign in:
   def self.from_omniauth(auth)
     user = where(auth.slice("provider", "uid")).first_or_initialize
-
     # raise auth.info.inspect
-
     %w(first_name last_name email).each do |s|
       user.send("#{s}=".to_sym, auth.info.send(s.to_sym))
     end
@@ -83,18 +81,3 @@ class User < ActiveRecord::Base
 
 end
 
-
-# what raise.info.inspec returns:
-# # <OmniAuth::AuthHash::InfoHash 
-# description="Financial Analyst - Canadian Pension Plan Investment Board" 
-# email="christine.jinae@gmail.com" 
-# first_name="Christine J. Lee," 
-# image="http://m3.licdn.com/mpr/mprx/0_TLYPQjyyVDFUz8dqT322QxDg4HrNB8dqiGE2Qxj8FDXkeXONDimxH0Wm9QKwqbH486ySW47LtwyO" 
-# last_name="CA" 
-# location=#<OmniAuth::AuthHash 
-# country=#<OmniAuth::AuthHash code="ca"> 
-# name="Toronto, Canada Area"> 
-# name="Christine J. Lee, CA" 
-# nickname="Christine J. Lee, CA" 
-# urls=#<OmniAuth::AuthHash public_profile="http://www.linkedin.com/pub/christine-j-lee-ca/24/413/735">
-# >

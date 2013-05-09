@@ -153,6 +153,20 @@ textarea:focus, input:focus{
 	width: 50%;
 }
 
+/*all media queries*/
+@media all and (max-width: 769px) {
+ body {
+	.search-header {
+		display: none;
+	}
 
+	.hootext {
+		display:none;
+	}
+	input{
+		display:none;
+	}
+ }
+}
 
 

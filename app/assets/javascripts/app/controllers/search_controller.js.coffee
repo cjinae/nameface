@@ -2,4 +2,4 @@
 	$scope.events = events
 
 # SearchController.$inject = ['$scope', '$http'];
-# @ is coffeeScript for window.
+# @ is coffeeScript for window
