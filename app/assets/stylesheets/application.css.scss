@@ -118,8 +118,14 @@ input[type="submit"].dropdown_submit {
 // media queries
 @media all and (max-width: 769px) {
  body {
-  .navbar .navbar-inner .nav{
-    margin: 1px 1px 0 0;
+  .navbar li{
+    line-height: 10px;
   }
+}
+}
+
+@media all and (max-width: 480px) {
+ body {
+
 }
 }
