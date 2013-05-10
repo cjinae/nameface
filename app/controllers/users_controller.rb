@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 
   def index
     if params[:cardview].nil?
-      @random_users = User.get_random_user(12)
+      @random_users = User.get_random_user(18)
     else
       @random_users = User.get_random_user params[:cardview]
     end
