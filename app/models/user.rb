@@ -1,16 +1,16 @@
 class User < ActiveRecord::Base
-  authenticates_with_sorcery!
+  # authenticates_with_sorcery!
   # attr_accessible :email, :password, :password_confirmation, :first_name, :last_name, :cardview, :avatar
   
-  has_attached_file :avatar, :styles => {:asd => "250x250px", :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"  
-  validates_format_of :first_name, :with => /^[^0-9`!@#\$%\^&*+_=]+$/
-  validates_format_of :last_name, :with => /^[^0-9`!@#\$%\^&*+_=]+$/
+  # has_attached_file :avatar, :styles => {:asd => "250x250px", :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"  
+  # validates_format_of :first_name, :with => /^[^0-9`!@#\$%\^&*+_=]+$/
+  # validates_format_of :last_name, :with => /^[^0-9`!@#\$%\^&*+_=]+$/
   
   # for non-linked in user 
-  validates :first_name, :presence => true
-  validates :last_name, :presence => true
-  validates :email, :presence => true, :uniqueness => true
-  validates :password, :presence => true, :on => :create
+  # validates :first_name, :presence => true
+  # validates :last_name, :presence => true
+  # validates :email, :presence => true, :uniqueness => true
+  # validates :password, :presence => true, :on => :create
 
   has_many :assignments
   has_many :events, through: :assignments
