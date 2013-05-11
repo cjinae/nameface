@@ -25,7 +25,7 @@
       <%= link_to 'Logout', :session, :method => :delete, class: 'all-btn' %>
     <% else %>
       <%#= link_to 'Sign Up', [:new, :user], class: 'btn' %>
-      <%= link_to 'Log In', '/auth/linkedin_oauth2' , class: 'btn' %>
+      <%= link_to "Sign in with Linkedin", "/auth/linkedin", class: 'btn' %>
     <% end %>
    </div>
 

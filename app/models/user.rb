@@ -42,61 +42,20 @@ class User < ActiveRecord::Base
 
 # For future enhancement: linked in sign in:
 
-def self.from_omniauth(auth)
-  where(auth.slice("provider", "uid")).first || create_from_omniauth(auth)
-end
-
-def self.create_from_omniauth(auth)
-  create! do |user|
-    user.provider = auth["provider"]
-    user.uid = auth["uid"]
-    user.name = auth["info"]["first_name"]
-#     user.picture_url = auth["picture-url"]
-#     user.email = auth["info"]["email-address"]
+  def self.from_omniauth(auth)
+    where(auth.slice("provider", "uid")).first || create_from_omniauth(auth)
   end
-end
 
-# Old linked in
+  def self.create_from_omniauth(auth)
+    create! do |user|
+      user.provider = auth["provider"]
+      user.uid = auth["uid"]
+      user.first_name = auth["info"]["first_name"]
+      user.picture_url = auth["picture-url"]
+      user.email = auth["info"]["email"]
+    end
+  end
 
-
-  # def self.from_omniauth(auth)
-    # user = where(auth.slice("provider", "uid")).first_or_initialize
-    # raise auth.info.inspect
-    # %w(first_name last_name email).each do |s|
-    #   user.send("#{s}=".to_sym, auth.info.send(s.to_sym))
-    # end
-
-    # user.first_name = auth.info.first_name
-    # user.picture_url = auth.info.image
-    # user.token = auth.credentials.token
-    # user.secret = auth.credentials.secret
-    # user.save!
-
-    # return user
-
-    # user.first_name = auth.info.first_name
-    # user.last_name = auth.info.last_name
-    # user.picture_url = auth.info.picture_url
-    # user.email = auth.info.email
-
-    # || create_from_omniauth(auth)
-  # end
-  
-
-  # def self.create_from_omniauth(auth)
-  #   raise "wut"
-  #   raise auth.info.inspect
-  #   create! do |user|
-  #     user.provider = auth["provider"]
-  #     user.uid = auth["uid"]
-  #     user.first_name = auth.info.first_name
-  #     user.last_name = auth.info.last_name
-  #     user.picture_url = auth.info.picture_url
-  #     user.email = auth.info.email
-  #     user.token = auth.credentials.token
-  #     user.secret = auth.credentials.secret
-  #   end
-  # end
 
 end
 

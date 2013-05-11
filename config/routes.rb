@@ -11,11 +11,10 @@ resources :events do
 end 
 
 root :to => 'pages#index'
-# get '/auth/:provider/callback', to: 'sessions#create'
 
 match 'auth/:provider/callback', to: 'sessions#create'
-# match 'auth/failure', to: redirect('/')
-# match 'signout', to: 'sessions#destroy', as: 'signout'
+match 'auth/failure', to: redirect('/')
+match 'signout', to: 'sessions#destroy', as: 'signout'
 
 
 end
