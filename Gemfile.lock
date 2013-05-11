@@ -113,11 +113,10 @@ GEM
     omniauth (1.1.4)
       hashie (>= 1.2, < 3)
       rack
-    omniauth-linkedin-oauth2 (0.0.2)
-      omniauth (~> 1.0)
-      omniauth-oauth2
-    omniauth-oauth2 (1.1.1)
-      oauth2 (~> 0.8.0)
+    omniauth-linkedin (0.1.0)
+      omniauth-oauth (~> 1.0)
+    omniauth-oauth (1.0.1)
+      oauth
       omniauth (~> 1.0)
     paperclip (3.4.1)
       activemodel (>= 3.0.0)
@@ -201,7 +200,8 @@ DEPENDENCIES
   kaminari-bootstrap
   launchy
   letter_opener
-  omniauth-linkedin-oauth2
+  omniauth
+  omniauth-linkedin
   paperclip (~> 3.0)
   pg
   populator
