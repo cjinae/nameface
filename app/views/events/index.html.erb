@@ -4,11 +4,12 @@
 </script>
 
 <div class = "container">
-	<div class = "search-header blinkon"></div>
-	<div class="search" ng-controller="SearchController">
-		<input ng-model = "searchText" class = "search-entry">	
+	<!-- <div class = "search-header blinkon"></div> -->
+	<!-- <div class="search" ng-controller="SearchController"> -->
+		<!-- <input ng-model = "searchText" class = "search-entry">	 -->
 		<ul class = "thumbnails">
-			<div ng-repeat="event in events | filter:searchText">
+			<!-- <div ng-repeat="event in events | filter:searchText"> -->
+			<% @events.each do |t|%>
 				<li class = "span12 listed">
 					<div class = "row-fluid">
 						<div class = "span12">
@@ -21,20 +22,20 @@
 									<!-- </div> -->
 								<!-- </div> -->
 								<div class = "listed-inner">
-									<p class = "event_title">{{event.title}}</p>
-									<p class = "event_description">{{event.description}}</p>
+									<p class = "event_title"><%=t.title%></p>
+									<p class = "event_description"><%=t.description%></p>
 								</div>
 								<ul class = "listed-action">
 									<li class = "action left">
-										<a href="/events/{{event.id}}", class = "action play"></a>
-										<%#= link_to "", event_path('{{event.id}}'), class: "action play" %>
+										<!-- <a href="/events/{{event.id}}", class = "action play"></a> -->
+										<%= link_to "", event_path(t.id), class: "action play" %>
 									</li>
 									<li class = "action right">
 										<% if logged_in? %>
-										<%= link_to "", "#{add_event_to_user_events_path}?event_title={{event.title}}", class: "action add", remote: true %>
-										<%#= link_to "Add", {:controller => :events, 
+										<%#= link_to "", "#{add_event_to_user_events_path}?event_title={{event.title}}", class: "action add", remote: true %>
+										<%= link_to "", {:controller => :events, 
 																:action => 'add_event_to_user', 
-																:event_title => event.title}, class: "action remove", remote: true %>
+																:event_title => t.title}, class: "action remove", remote: true %>
 										<% end %>
 									</li>
 								</ul>
@@ -42,9 +43,10 @@
 						</div>
 					</div>
 				</li>
-			</div>
+			<%end%>
+			<!-- </div> -->
 		</ul>
-</div>
+	<!-- </div> -->
 </div>
 
 
