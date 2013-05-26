@@ -14,5 +14,7 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require angular
-//= require_tree .
+//= require script.js
+//= require events.js
+//= require ./app/controllers/search_controller.js.coffee
 
