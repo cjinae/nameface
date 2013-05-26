@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   authenticates_with_sorcery!
   # attr_accessible :email, :password, :password_confirmation, :first_name, :last_name, :cardview, :avatar
-  
+  attr_accessible :avatar
   has_attached_file :avatar, :styles => {:medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/owl.png"  
   validates_format_of :first_name, :with => /^[^0-9`!@#\$%\^&*+_=]+$/
   validates_format_of :last_name, :with => /^[^0-9`!@#\$%\^&*+_=]+$/
