@@ -15,9 +15,9 @@ class User < ActiveRecord::Base
   has_many :assignments
   has_many :events, through: :assignments
    
-  validates_attachment :avatar,
-  :content_type => { :content_type => "image/jpg" },
-  :size => { :in => 0..10.kilobytes }
+  # validates_attachment :avatar,
+  # :content_type => { :content_type => "image/jpg" },
+  # :size => { :in => 0..10.kilobytes }
 
 	def name
 		"#{first_name} #{last_name}"
