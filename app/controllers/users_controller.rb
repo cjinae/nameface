@@ -8,12 +8,7 @@ class UsersController < ApplicationController
     else
       @random_users = User.get_random_user params[:cardview]
     end
-    # @users = User.all
-    # respond_to do |format|
-    #   format.html {}
-      # format.json {render json: @users.to_json(only: :first_name)}
-      # format.json {render json: @users}
-    # end
+
   end
 
   def new
@@ -33,5 +28,19 @@ class UsersController < ApplicationController
   def show
     @user = User.find params[:id]
   end
+  
+  def edit
+    @user = User.find(params[:id])
+  end
 
+  def update
+    @user = User.find(params[:id])
+    
+    if @user.update_attributes(params[:user])
+      redirect_to user_path(current_user), notice: 'You have updated your information'
+    else
+      render action: "edit"
+    end
+  end
+  
 end

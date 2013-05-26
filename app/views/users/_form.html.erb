@@ -1,0 +1,27 @@
+<div class = "container-fluid span12">
+<div class = "peep_owl"></div>
+  <div class="span5 offset3">
+    <div class="form-actions">
+      <h1>Hoo, you?</h1>
+      <p>A better way to remember faces. Create and account to begin.</p>
+      <%= form_for @user, :url => users_path, :html => { :multipart => true }  do |f| %>
+        <% unless f.object.errors.empty? %>
+          <div class="alert alert-error">
+            <strong>Try again after fixing the following things:</strong><br/>
+            <ul>
+              <% f.object.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+        <%= f.text_field :first_name, placeholder: "First Name", class: "input-block-level" %>
+        <%= f.text_field :last_name, placeholder: "Last Name", class: "input-block-level" %>
+        <%= f.email_field :email, placeholder: "E-mail Address", class: "input-block-level" %>
+        <%= f.password_field :password, placeholder: "Password", class: "input-block-level" %> 
+        <%= f.file_field :avatar %>
+        <%= f.submit 'Submit', class: 'btn' %>
+      </div> 
+    <% end %>
+  </div>
+</div>
