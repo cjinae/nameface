@@ -26,7 +26,7 @@
       <%= link_to 'Edit User Info', edit_user_path(current_user), class: 'all-btn' %>    
     <% else %>
       <%= link_to 'Sign Up', [:new, :user], class: 'btn' %>
-      <%#= link_to 'Log In', '/auth/linkedin_oauth2' , class: 'btn' %>
+      <%= link_to 'Log In', new_session_path, class: 'btn' %>
     <% end %>
    </div>
 
