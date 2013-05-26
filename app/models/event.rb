@@ -1,9 +1,9 @@
 class Event < ActiveRecord::Base
 	attr_accessible :title, :description, :avatar
     
-    has_attached_file :avatar, :styles => { :asd => "250x250px", :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"  
+    has_attached_file :avatar, :styles => {:medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/owl.png"  
 	validates :title, :presence => true, :uniqueness => true
-	validates_format_of :title, :with => /^[^0-9`!@#\$%\^&*+_=]+$/
+	validates_format_of :title, :with => /^[^`@#\$%\^&*+_=]+$/
   	validates :description, :presence => true
 
 	has_many :assignments
