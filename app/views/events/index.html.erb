@@ -35,7 +35,7 @@
 										<%#= link_to "", "#{add_event_to_user_events_path}?event_title={{event.title}}", class: "action add", remote: true %>
 										<%= link_to "", {:controller => :events, 
 																:action => 'add_event_to_user', 
-																:event_title => t.title}, class: "action remove", remote: true %>
+																:event_title => t.title}, class: "action add", remote: true %>
 										<% end %>
 									</li>
 								</ul>
