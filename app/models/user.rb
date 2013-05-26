@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   authenticates_with_sorcery!
   # attr_accessible :email, :password, :password_confirmation, :first_name, :last_name, :cardview, :avatar
   
-  has_attached_file :avatar, :styles => {:asd => "250x250px", :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"  
+  has_attached_file :avatar, :styles => {:asd => "250x250px", :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/owl.png"  
   validates_format_of :first_name, :with => /^[^0-9`!@#\$%\^&*+_=]+$/
   validates_format_of :last_name, :with => /^[^0-9`!@#\$%\^&*+_=]+$/
   
@@ -15,9 +15,9 @@ class User < ActiveRecord::Base
   has_many :assignments
   has_many :events, through: :assignments
    
-  # validates_attachment :avatar, :presence => true,
-  # :content_type => { :content_type => "image/jpg" },
-  # :size => { :in => 0..10.kilobytes }
+  validates_attachment :avatar,
+  :content_type => { :content_type => "image/jpg" },
+  :size => { :in => 0..10.kilobytes }
 
 	def name
 		"#{first_name} #{last_name}"
