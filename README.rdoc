@@ -1,13 +1,17 @@
 == Welcome to Hoo?
-My final project. Currently a work in progress.
+My final project.
+See it live @ http://hoo.herokuapp.com/
 The app is called " HOO? "
-Remember peoples names and faces using flash cards based on events they attend. 
+It is an app to help remember peoples names and faces using flash cards based on events they attend. 
 
 practice for: 
 - ruby on rails
 - some angular (for search)
 - jQuery
 - unit/test
-- linkedin API for log in
 
-more to come.
+In the Feature Branch
+- linkedin API for log in
+- angular for search
+
+
