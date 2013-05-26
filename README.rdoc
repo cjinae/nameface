@@ -6,7 +6,6 @@ It is an app to help remember peoples names and faces using flash cards based on
 
 practice for: 
 - ruby on rails
-- some angular (for search)
 - jQuery
 - unit/test
 
